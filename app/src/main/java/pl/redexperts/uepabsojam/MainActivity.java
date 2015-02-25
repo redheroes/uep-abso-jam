@@ -26,13 +26,15 @@ public class MainActivity extends MaterialNavigationDrawer {
 
         int color = getResources().getColor(R.color.main_color);
 
+        setUserEmailTextColor(color);
+        setUsernameTextColor(color);
         // create sections
         setDrawerBackgroundColor(getResources().getColor(android.R.color.white));
-        addSection(newSection("Lista Jamów", R.drawable.ic_format_list_numbers,new FragmentJams()).setSectionColor(color));
-        addSection(newSection("Moje Jamy",R.drawable.ic_playlist_plus,new FragmentJams()).setSectionColor(color));
-        addSection(newSection("Ludzie",R.drawable.ic_human_male_female, new FragmentJams()).setSectionColor(color));
-        addSection(newSection("Ustawienia",R.drawable.ic_settings, new FragmentJams()).setSectionColor(color));
-        getToolbar().setTitleTextColor(getResources().getColor(android.R.color.white));
+        addSection(newSection("Lista Jamów", R.drawable.ic_format_list_numbers,new FragmentJams()));
+        addSection(newSection("Moje Jamy",R.drawable.ic_playlist_plus,new FragmentJams()));
+        addSection(newSection("Ludzie",R.drawable.ic_human_male_female, new FragmentJams()));
+        addSection(newSection("Ustawienia",R.drawable.ic_settings, new FragmentJams()));
+        getToolbar().setTitleTextColor(color);
 
     }
 
