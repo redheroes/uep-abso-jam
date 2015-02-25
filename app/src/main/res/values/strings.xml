@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">UEP Abso Jam</string>
 
@@ -10,8 +11,8 @@
     <string name="guardian_profile_validate_email">Pole E-mail nie jest odpowiedniego formatu</string>
 
     <!-- Actions -->
-    <string name="action_save">Zapisz</string>
-    <string name="action_cancel">Anuluj</string>
+    <string name="action_users">Użytkownicy</string>
+    <string name="action_join">Dołącz</string>
     <string name="action_logout">Wyloguj</string>
     <string name="action_add">Dodaj</string>
 
@@ -41,5 +42,10 @@
 
     <string name="name" />
 
+
+    <!-- Jam Details -->
+    <string name="when">Kiedy: </string>
+    <string name="where">Gdzie: </string>
+    <string name="users">Ilość osób: </string>
 
 </resources>
