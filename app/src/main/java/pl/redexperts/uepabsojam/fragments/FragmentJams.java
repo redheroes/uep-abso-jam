@@ -18,6 +18,7 @@ import pl.redexperts.uepabsojam.R;
 import pl.redexperts.uepabsojam.listeners.ApiResponseListener;
 import pl.redexperts.uepabsojam.listeners.OnArrayListContextMenuListener;
 import pl.redexperts.uepabsojam.model.Jam;
+import pl.redexperts.utils.FragmentHelper;
 import pl.redexperts.utils.PopupUtils;
 
 public class FragmentJams extends Fragment implements View.OnClickListener,
@@ -86,7 +87,8 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.jam_details:
-                //TODO: show details
+                FragmentHelper.showFragment(getActivity(), R.id.container,
+                        new FragmentJams(), true);
 
                 return true;
 
