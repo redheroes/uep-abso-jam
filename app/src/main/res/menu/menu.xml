@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/actionbar_context_menu"
+        android:icon="@drawable/ic_context_menu_button_white"
+        app:showAsAction="always"
+        android:title="@string/action_logout">
+        <menu>
+            <item
+                android:id="@+id/logoutButton"
+                android:title="@string/action_logout">
+            </item>
+        </menu>
+    </item>
+</menu>

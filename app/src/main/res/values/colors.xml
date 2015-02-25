@@ -39,4 +39,5 @@
     <color name="fragment_settings_textColor">@color/black_87pc</color>
     <color name="button_cancel_save">#f7f7f7</color>
     <color name="button_cancel_save_pressed">#eeeeee</color>
+    <color name="main_color">#02532A</color>
 </resources>

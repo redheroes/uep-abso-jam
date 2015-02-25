@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import pl.redexperts.utils.ProgressDialogUtils;
 
 public class LoginActivity extends Activity {
 
@@ -35,16 +34,12 @@ public class LoginActivity extends Activity {
                 t.start();
                 synchronized(t){
                     try{
-                        System.out.println("Waiting for b to complete...");
-                        ProgressDialogUtils.setIconDialog(LoginActivity.this);
-                        t.wait(2000);
+                        t.wait(1000);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                     }catch(InterruptedException e){
                         e.printStackTrace();
                     }
-
-                    System.out.println("Total is: ");
                 }
             }
         });
