@@ -9,6 +9,11 @@
     <string name="guardian_profile_validate_empty_email">Pole E-mail nie może być puste</string>
     <string name="guardian_profile_validate_email">Pole E-mail nie jest odpowiedniego formatu</string>
 
+    <!-- Actions -->
+    <string name="action_save">Zapisz</string>
+    <string name="action_cancel">Anuluj</string>
+    <string name="action_logout">Wyloguj</string>
+    <string name="action_add">Dodaj</string>
 
     <!-- Login/Register -->
     <string name="login_fragment_email_login">ZWYKŁE LOGOWANIE</string>
