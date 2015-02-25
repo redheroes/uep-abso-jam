@@ -1,39 +1,26 @@
 package pl.redexperts.uepabsojam;
 
-import android.support.v7.app.ActionBarActivity;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
+import it.neokree.materialnavigationdrawer.elements.MaterialAccount;
 
 
-public class MainActivity extends ActionBarActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+public class MainActivity extends MaterialNavigationDrawer {
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    public void init(Bundle bundle) {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        MaterialAccount account = new MaterialAccount(this.getResources(),"Nazwa","nazwa@gmail.com",R.mipmap.user,R.mipmap.mat2);
+        this.addAccount(account);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        // create sections
+        this.addSection(newSection("Section 1", new TestFragment()));
+        this.addSection(newSection("Section 2",new TestFragment()));
+        this.addSection(newSection("Section 3", R.mipmap.ic_android_grey600_24dp,new TestFragment()).setSectionColor(Color.parseColor("#9c27b0")));
+        this.addSection(newSection("Section",R.mipmap.ic_android_grey600_24dp,new TestFragment()).setSectionColor(Color.parseColor("#03a9f4")));
 
-        return super.onOptionsItemSelected(item);
     }
 }
