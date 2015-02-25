@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:textColor="@drawable/button_text_color"
-                android:text="@string/action_cancel" />
+                android:text="@string/action_users" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:textColor="@drawable/button_text_color"
-                android:text="@string/action_save" />
+                android:text="@string/action_join" />
 
             <ImageView
                 android:layout_width="wrap_content"

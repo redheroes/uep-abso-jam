@@ -10,8 +10,8 @@
     <string name="guardian_profile_validate_email">Pole E-mail nie jest odpowiedniego formatu</string>
 
     <!-- Actions -->
-    <string name="action_save">Zapisz</string>
-    <string name="action_cancel">Anuluj</string>
+    <string name="action_users">Użytkownicy</string>
+    <string name="action_join">Dołącz</string>
     <string name="action_logout">Wyloguj</string>
     <string name="action_add">Dodaj</string>
 
@@ -27,15 +27,30 @@
     <string name="login_uep_apso">UEP\nAPSO JAM</string>
     <string name="login_uep_apso_content">Dołącz do kreatywnego zespołu i zmierz się z wyzwaniami</string>
 
+    <!--Jams-->
     <string name="jam_menu_item_details">Szczegóły</string>
     <string name="jam_menu_item_take_apart">Weź udział</string>
+    <string name="jam_edit_name">Nazwa jamu</string>
+    <string name="jam_edit_description">Opis</string>
+    <string name="jam_edit_when">Kiedy</string>
+    <string name="jam_edit_place">Miejsce spotkania</string>
+    <string name="jam_edit_street">Ulica</string>
+    <string name="jam_edit_number">Numer</string>
+    <string name="jam_edit_city">Miasto</string>
+    <string name="jam_edit_number_of_people">Ilość osób</string>
 
+    <string name="name" />
 
     <string-array name="jams_filter">
         <item>Weźmiesz udział</item>
         <item>Brałeś udział</item>
         <item>Zorganizowałeś</item>
     </string-array>
+
+    <!-- Jam Details -->
+    <string name="when">Kiedy: </string>
+    <string name="where">Gdzie: </string>
+    <string name="users">Ilość osób: </string>
 
     <string-array name="jams_future">
         <item>Lorem ipfsgr</item>

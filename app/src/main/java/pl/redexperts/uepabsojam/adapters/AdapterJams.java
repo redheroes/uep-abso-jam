@@ -17,36 +17,36 @@ import pl.redexperts.uepabsojam.model.Jam;
 
 public class AdapterJams extends ArrayAdapter<Jam> {
 
-    private final List<Jam> glucometers;
+    private final List<Jam> jams;
     private final Context context;
     private OnArrayListContextMenuListener contextMenuListener;
 
     public AdapterJams(Context context, int resource, List<Jam> objects) {
         super(context, resource, objects);
         this.context = context;
-        this.glucometers = objects;
+        this.jams = objects;
     }
 
     @Override
     public int getCount() {
-        return glucometers.size();
+        return jams.size();
     }
 
     @Override
     public Jam getItem(int position) {
-        return glucometers.get(position);
+        return jams.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return glucometers.get(position).getId();
+        return jams.get(position).getId();
     }
 
     @Override
     public View getView(final int position, View row, ViewGroup parent) {
         ViewHolder holder;
 
-        Jam glucometer = getItem(position);
+        Jam jam = getItem(position);
         if (row == null) {
 
             holder = new ViewHolder();
@@ -57,8 +57,8 @@ public class AdapterJams extends ArrayAdapter<Jam> {
             holder.name = (TextView) row.findViewById(R.id.text_jam_name);
 
 
-            if (glucometer != null && glucometer.getName() != null) {
-                holder.name.setText(glucometer.getName());
+            if (jam != null && jam.getName() != null) {
+                holder.name.setText(jam.getName());
             }
 
             row.setTag(holder);
@@ -67,8 +67,8 @@ public class AdapterJams extends ArrayAdapter<Jam> {
             holder = (ViewHolder) row.getTag();
         }
 
-        if (glucometer != null && glucometer.getName() != null) {
-            holder.name.setText(glucometer.getName());
+        if (jam != null && jam.getName() != null) {
+            holder.name.setText(jam.getName());
         }
         holder.menuButton = (RelativeLayout) row.findViewById(R.id.layout_jam_item);
         final View finalRow = row;
