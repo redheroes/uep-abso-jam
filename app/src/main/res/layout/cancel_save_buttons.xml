@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="56dp"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_height"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@drawable/button_text_color"
+                android:text="@string/action_cancel" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_centerVertical="true"
+                android:src="@drawable/cancel"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/save_button"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/save_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@drawable/button_text_color"
+                android:text="@string/action_save" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_centerVertical="true"
+                android:src="@drawable/check_in"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
