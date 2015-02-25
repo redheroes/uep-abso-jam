@@ -80,7 +80,6 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
         if (!isVisible()) {
             return;
         }
-
     }
 
     @Override

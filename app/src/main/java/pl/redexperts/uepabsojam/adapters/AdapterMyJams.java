@@ -15,13 +15,13 @@ import pl.redexperts.uepabsojam.listeners.OnArrayListContextMenuListener;
 import pl.redexperts.uepabsojam.model.Jam;
 
 
-public class AdapterJams extends ArrayAdapter<Jam> {
+public class AdapterMyJams extends ArrayAdapter<String> {
 
-    private final List<Jam> glucometers;
+    private final List<String> glucometers;
     private final Context context;
     private OnArrayListContextMenuListener contextMenuListener;
 
-    public AdapterJams(Context context, int resource, List<Jam> objects) {
+    public AdapterMyJams(Context context, int resource, List<String> objects) {
         super(context, resource, objects);
         this.context = context;
         this.glucometers = objects;
@@ -33,33 +33,23 @@ public class AdapterJams extends ArrayAdapter<Jam> {
     }
 
     @Override
-    public Jam getItem(int position) {
+    public String getItem(int position) {
         return glucometers.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return glucometers.get(position).getId();
     }
 
     @Override
     public View getView(final int position, View row, ViewGroup parent) {
         ViewHolder holder;
 
-        Jam glucometer = getItem(position);
+        String jam = getItem(position);
         if (row == null) {
 
             holder = new ViewHolder();
 
             row = LayoutInflater.from(context)
-                    .inflate(R.layout.fragment_my_jams, parent, false);
+                    .inflate(R.layout.fragment_my_jam_item, parent, false);
 
             holder.name = (TextView) row.findViewById(R.id.text_jam_name);
-
-
-            if (glucometer != null && glucometer.getName() != null) {
-                holder.name.setText(glucometer.getName());
-            }
 
             row.setTag(holder);
 
@@ -67,10 +57,9 @@ public class AdapterJams extends ArrayAdapter<Jam> {
             holder = (ViewHolder) row.getTag();
         }
 
-        if (glucometer != null && glucometer.getName() != null) {
-            holder.name.setText(glucometer.getName());
-        }
-        holder.menuButton = (RelativeLayout) row.findViewById(R.id.layout_jam_item);
+
+            holder.name.setText(jam);
+
         final View finalRow = row;
         row.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +76,6 @@ public class AdapterJams extends ArrayAdapter<Jam> {
     }
 
     private static class ViewHolder {
-        TextView name, address, date;
-        RelativeLayout menuButton;
+        TextView name;
     }
 }
