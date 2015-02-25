@@ -26,6 +26,12 @@
     <string name="login_fragment_submit_registration">Zarejestruj się</string>
     <string name="login_uep_apso">UEP\nAPSO JAM</string>
     <string name="login_uep_apso_content">Dołącz do kreatywnego zespołu i zmierz się z wyzwaniami</string>
+
+    <!--Jams-->
+    <string name="jam_menu_item_details">Szczegóły</string>
+    <string name="jam_menu_item_take_apart">Weź udział</string>
+
+
    
 
 </resources>
