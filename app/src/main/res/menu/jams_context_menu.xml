@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/jam_details"
+        android:title="@string/jam_menu_item_details" />
+    <item
+        android:id="@+id/jam_take_apart"
+        android:title="@string/jam_menu_item_take_apart" />
+</menu>

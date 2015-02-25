@@ -1,7 +1,6 @@
 package pl.redexperts.uepabsojam;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -10,6 +9,7 @@ import android.view.MenuItem;
 
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialAccount;
+import pl.redexperts.uepabsojam.fragments.FragmentJams;
 
 
 public class MainActivity extends MaterialNavigationDrawer {
@@ -28,10 +28,10 @@ public class MainActivity extends MaterialNavigationDrawer {
 
         // create sections
         setDrawerBackgroundColor(getResources().getColor(android.R.color.white));
-        addSection(newSection("Lista Jamów", R.drawable.ic_format_list_numbers,new TestFragment()).setSectionColor(color));
-        addSection(newSection("Moje Jamy",R.drawable.ic_playlist_plus,new TestFragment()).setSectionColor(color));
-        addSection(newSection("Ludzie",R.drawable.ic_human_male_female, new TestFragment()).setSectionColor(color));
-        addSection(newSection("Ustawienia",R.drawable.ic_settings, new TestFragment()).setSectionColor(color));
+        addSection(newSection("Lista Jamów", R.drawable.ic_format_list_numbers,new FragmentJams()).setSectionColor(color));
+        addSection(newSection("Moje Jamy",R.drawable.ic_playlist_plus,new FragmentJams()).setSectionColor(color));
+        addSection(newSection("Ludzie",R.drawable.ic_human_male_female, new FragmentJams()).setSectionColor(color));
+        addSection(newSection("Ustawienia",R.drawable.ic_settings, new FragmentJams()).setSectionColor(color));
         getToolbar().setTitleTextColor(getResources().getColor(android.R.color.white));
 
     }
