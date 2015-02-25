@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:id="@+id/login_page_top"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white"
+            android:layout_marginBottom="0dp"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/edit_text"
+                    android:textSize="20dp"
+                    android:layout_marginTop="@dimen/login_margin_top"
+                    android:text="@string/login_uep_apso"
+                    />
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/edit_text"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+                    android:text="@string/login_uep_apso_content"
+                    />
+
+                <Button
+                    android:id="@+id/login"
+                    android:gravity="center"
+                    style="@style/edit_text"
+                    android:layout_marginTop="@dimen/login_margin_top"
+                    android:background="@drawable/edit_text_selector"
+                    android:text="@string/login_fragment_linkdin_login"
+                  />
+
+                <TextView
+                    android:id="@+id/login_validation"
+                    style="@style/validator"
+                    android:text="@string/validator_field_required"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:id="@+id/password"
+                    android:gravity="center"
+                    style="@style/edit_text"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/login_margin"
+                    android:background="@drawable/edit_text_selector"
+                    android:text="@string/login_fragment_email_login" />
+
+                <TextView
+                    android:id="@+id/password_validation"
+                    style="@style/validator"
+                    android:text="@string/validator_field_required"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"/>
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+

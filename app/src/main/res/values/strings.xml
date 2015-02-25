@@ -1,9 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">UEP Abso Jam</string>
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Validators -->
+    <string name="validator_field_required">To pole jest wymagane!</string>
+    <string name="guardian_profile_validate_empty_email">Pole E-mail nie może być puste</string>
+    <string name="guardian_profile_validate_email">Pole E-mail nie jest odpowiedniego formatu</string>
+
+    <!-- Actions -->
+    <string name="action_save">Zapisz</string>
+    <string name="action_cancel">Anuluj</string>
+    <string name="action_logout">Wyloguj</string>
+    <string name="action_add">Dodaj</string>
+
+    <!-- Login/Register -->
+    <string name="login_fragment_email_login">ZWYKŁE LOGOWANIE</string>
+    <string name="login_fragment_linkdin_login">ZALOGUJ Z LINKEDIN</string>
+    <string name="login_fragment_repeat_pasword_hint">Powtórz hasło</string>
+    <string name="login_fragment_create_account_link">Załóż konto</string>
+    <string name="login_fragment_reset_password_link">Przywróć hasło</string>
+    <string name="login_fragment_submit_login">Zaloguj się</string>
+    <string name="login_fragment_accept_regulamin">Zaakceptuj regulamin</string>
+    <string name="login_fragment_submit_registration">Zarejestruj się</string>
+    <string name="login_uep_apso">UEP\nAPSO JAM</string>
+    <string name="login_uep_apso_content">Dołącz do kreatywnego zespołu i zmierz się z wyzwaniami</string>
+   
 
 </resources>
