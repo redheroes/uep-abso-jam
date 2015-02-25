@@ -30,8 +30,16 @@
     <!--Jams-->
     <string name="jam_menu_item_details">Szczegóły</string>
     <string name="jam_menu_item_take_apart">Weź udział</string>
+    <string name="jam_edit_name">Nazwa jamu</string>
+    <string name="jam_edit_description">Opis</string>
+    <string name="jam_edit_when">Kiedy</string>
+    <string name="jam_edit_place">Miejsce spotkania</string>
+    <string name="jam_edit_street">Ulica</string>
+    <string name="jam_edit_number">Numer</string>
+    <string name="jam_edit_city">Miasto</string>
+    <string name="jam_edit_number_of_people">Ilość osób</string>
 
+    <string name="name" />
 
-   
 
 </resources>

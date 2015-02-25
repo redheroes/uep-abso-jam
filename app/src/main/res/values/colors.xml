@@ -5,7 +5,7 @@
     <color name="black_87pc">#DE000000</color>
 
     <!-- global colors, to be used below -->
-    <color name="primary_dark_color">#6d9dd4</color>
+    <color name="primary_dark_color">#43b872</color>
     <color name="primary_color">@android:color/white</color>
     <color name="accent_color">@color/willcare_text_color</color>
     <color name="light_grey">#e0e0e0</color>
@@ -32,7 +32,7 @@
 
     <color name="black_overlay">#66000000</color>
     <color name="guardian_status_unselected">#bbbbbb</color>
-    <color name="willcare_text_color">#445e7f</color>
+    <color name="willcare_text_color">#02532A</color>
     <color name="edit_text_unselected">#9d9d9d</color>
 
     <color name="fragment_settings_divider">@color/black_9pc</color>

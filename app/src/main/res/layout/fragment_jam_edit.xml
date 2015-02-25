@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/willcare_list_background"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/cancel_save_buttons" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/edit_text_title"
+                android:layout_marginTop="@dimen/text_view_margin_top"
+                android:text="@string/jam_edit_name" />
+
+            <EditText
+                android:id="@+id/jam_name"
+                style="@style/edit_text"
+                android:background="@drawable/edit_text_selector" />
+
+            <TextView
+                style="@style/edit_text_title"
+                android:layout_marginTop="@dimen/validator_margin_top"
+                android:text="@string/jam_edit_description" />
+
+            <EditText
+                android:id="@+id/jam_description"
+                style="@style/edit_text"
+                android:background="@drawable/edit_text_selector" />
+
+
+            <TextView
+                style="@style/edit_text_title"
+                android:layout_marginTop="@dimen/validator_margin_top"
+                android:text="@string/jam_edit_when" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/image_padding"
+                    android:layout_height="@dimen/image_padding"
+                    android:layout_marginLeft="@dimen/image_padding"
+                    android:src="@drawable/calendar_text" />
+
+
+                <EditText
+                    android:id="@+id/jam_date_time"
+                    style="@style/edit_text_date_unclickable"
+                    android:background="@drawable/edit_text_selector"
+                    android:inputType="datetime"
+                    android:textColorHint="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/edit_text_title"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/jam_edit_when" />
+
+
+            <TextView
+                style="@style/edit_text_title"
+                android:text="@string/jam_edit_street" />
+
+            <EditText
+                android:id="@+id/pesel_number"
+                style="@style/edit_text_number_decimal"
+                android:background="@drawable/edit_text_selector"
+                android:inputType="number"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/edit_text_title"
+                        android:text="@string/jam_edit_street" />
+
+                    <EditText
+                        android:id="@+id/jam_address_number"
+                        style="@style/edit_text_number"
+                        android:background="@drawable/edit_text_selector" />
+
+                    </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/edit_text_title"
+                        android:text="@string/jam_edit_street" />
+
+                    <EditText
+                        android:id="@+id/jam_address_city"
+                        style="@style/edit_text_number"
+                        android:background="@drawable/edit_text_selector" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                style="@style/edit_text_title"
+                android:text="@string/jam_edit_number_of_people" />
+
+            <EditText
+                android:id="@+id/jam_person_number"
+                style="@style/edit_text_number_decimal"
+                android:background="@drawable/edit_text_selector"
+                android:inputType="number"
+                android:textColorHint="@android:color/darker_gray" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
