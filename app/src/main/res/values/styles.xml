@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!--<item name="android:homeAsUpIndicator">@drawable/ic_menu</item>-->
         <item name="actionBarWidgetTheme">@null</item>
         <item name="background">@color/primary_material_light</item>
