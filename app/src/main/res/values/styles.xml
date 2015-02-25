@@ -1,8 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!--<item name="android:homeAsUpIndicator">@drawable/ic_menu</item>-->
+        <item name="actionBarWidgetTheme">@null</item>
+        <item name="background">@color/primary_material_light</item>
+        <item name="colorPrimary">@color/slidingmenu_background</item>
+        <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
+        <item name="actionBarStyle">@style/willcareActionBar</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="toolbarStyle">@style/AppThemeToolbar</item>
+        <!--   your app branding color for the app bar -->
+        <!--   darker variant for the status bar and contextual app bars -->
+        <!--   theme UI controls like checkboxes and text fields -->
+        <!--<item name="android:calendarViewStyle">@style/CalendarViewAppTheme</item>-->
+
+        <!-- controls styles -->
+        <!--<item name="android:listChoiceIndicatorMultiple">@drawable/apptheme_btn_check_holo_light</item>-->
+        <!--<item name="android:listChoiceIndicatorSingle">@drawable/apptheme_btn_radio_holo_light</item>-->
+        <!--<item name="android:buttonStyle">@style/ButtonAppTheme</item>-->
+        <!--<item name="android:imageButtonStyle">@style/ImageButtonAppTheme</item>-->
+        <!--<item name="android:seekBarStyle">@style/SeekBarAppTheme</item>-->
+
+    </style>
+
+    <style name="AppThemeToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">@dimen/alert_users_person_image_size</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+
+    <style name="sliding_menu_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textColor">@color/willcare_text_color</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="settings_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textSize">@dimen/fragment_settings_textSize</item>
+        <item name="android:textColor">@color/fragment_settings_textColor</item>
+    </style>
+
+
+    <style name="text_view_checkbox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:layout_marginLeft">@dimen/image_margin_left</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@color/slidingmenu_text</item>
+    </style>
+
+    <style name="dialog_layout">
+        <item name="android:paddingLeft">@dimen/dialog_margin_left</item>
+        <item name="android:paddingRight">@dimen/dialog_margin_right</item>
+        <item name="android:paddingTop">@dimen/dialog_margin_top</item>
+        <item name="android:paddingBottom">@dimen/dialog_margin_bottom</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="dialog_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dialog_information_text_size</item>
+        <item name="android:textColor">@color/alert_users_nonbold_text</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <style name="dialog_button" parent="dialog_buttons">
+        <item name="android:layout_marginTop">@dimen/dialog_button_margin_top</item>
+    </style>
+
+    <style name="dialog_buttons" parent="dialog_text_view">
+        <item name="android:layout_height">@dimen/dialog_button_height</item>
+        <item name="android:textColor">@color/primary_dark_color</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="edit_text">
+        <item name="android:layout_marginLeft">@dimen/text_view_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/text_view_margin_right</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@color/alert_users_bold_text</item>
+        <item name="android:textColorHint">@color/edit_text_unselected</item>
+    </style>
+
+    <style name="edit_text_date_unclickable" parent="@style/edit_text">
+        <item name="android:focusable">false</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:inputType">date</item>
+    </style>
+
+    <style name="text_view">
+        <item name="android:layout_marginLeft">@dimen/text_view_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/text_view_margin_right</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:paddingBottom">@dimen/text_view_padding_bottom</item>
+        <item name="android:textColor">@color/edit_text_unselected</item>
+    </style>
+
+    <style name="edit_text_number" parent="@style/edit_text">
+        <item name="android:inputType">number</item>
+        <item name="android:paddingBottom">@dimen/text_view_padding_bottom</item>
+    </style>
+
+    <style name="edit_text_number_decimal" parent="@style/edit_text">
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:paddingBottom">@dimen/text_view_padding_bottom</item>
+    </style>
+
+    <style name="edit_text_phone" parent="@style/edit_text">
+        <item name="android:paddingBottom">@dimen/text_view_padding_bottom</item>
+        <item name="android:inputType">phone</item>
+    </style>
+
+    <style name="edit_text_email" parent="@style/edit_text">
+        <item name="android:paddingBottom">@dimen/text_view_padding_bottom</item>
+        <item name="android:inputType">textEmailAddress</item>
+    </style>
+
+    <style name="edit_text_title">
+        <item name="android:layout_marginLeft">@dimen/text_view_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/text_view_margin_right</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:layout_marginBottom">@dimen/title_padding_bottom</item>
+        <item name="android:textColor">@color/willcare_actionbar_title</item>
+    </style>
+
+    <style name="validator">
+        <item name="android:textSize">@dimen/validator_text_size</item>
+        <item name="android:textColor">@color/willcare_list_background_red</item>
+        <item name="android:layout_marginTop">@dimen/validator_margin</item>
+        <item name="android:layout_marginBottom">@dimen/validator_margin</item>
+        <item name="android:layout_marginLeft">@dimen/validator_margin_left</item>
+
+    </style>
+
+    <style name="header">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textSize">@dimen/alert_users_bold_size</item>
+        <item name="android:layout_marginLeft">@dimen/text_view_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/text_view_margin_right</item>
+        <item name="android:layout_marginTop">@dimen/header_margin_top</item>
+        <item name="android:textColor">@color/willcare_actionbar_title</item>
+    </style>
+
+    <style name="subheader">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textSize">@dimen/subheader_text_size</item>
+        <item name="android:layout_marginLeft">@dimen/text_view_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/text_view_margin_right</item>
+        <item name="android:layout_marginTop">@dimen/subheader_margin_top</item>
+        <item name="android:textColor">@color/subheader</item>
+    </style>
+
+    <style name="unit_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:layout_marginLeft">@dimen/unit_margin_left</item>
+        <item name="android:textColor">@color/slidingmenu_text</item>
+    </style>
+
+    <style name="settings_divider">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/fragment_settings_spacer_height</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textSize">@dimen/fragment_settings_textSize</item>
+        <item name="android:textColor">@color/fragment_settings_divider</item>
+    </style>
+
+    <style name="login_pages_text_style">
+        <item name="android:textSize">@dimen/login_page_text_size</item>
+        <item name="android:textColor">@color/primary_dark_color</item>
+        <item name="android:textColorHint">@color/primary_dark_color</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProgressDialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/willcare_actionbar_text_size</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@android:color/transparent</item>
+        <item name="android:bottomDark">@android:color/transparent</item>
+        <item name="android:bottomMedium">@android:color/transparent</item>
+        <item name="android:centerBright">@android:color/transparent</item>
+        <item name="android:centerDark">@android:color/transparent</item>
+        <item name="android:centerMedium">@android:color/transparent</item>
+        <item name="android:fullBright">@android:color/transparent</item>
+        <item name="android:fullDark">@android:color/transparent</item>
+        <item name="android:topBright">@android:color/transparent</item>
+        <item name="android:topDark">@android:color/transparent</item>
+    </style>
+
+    <style name="measuremets_list_text">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">@dimen/layout_margin_left</item>
+        <item name="android:textColor">@color/edit_text_unselected</item>
+    </style>
+
+    <style name="glucometers_list_text">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">@dimen/layout_margin_left</item>
+    </style>
+
+    <style name="willcareActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="background">@android:color/white</item>
+        <item name="titleTextStyle">@style/willcareActionBarTitleStyle</item>
+    </style>
+
+    <style name="willcareActionBarTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/willcare_actionbar_title</item>
+    </style>
+
+    <style name="fragment_settings_ll">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:paddingLeft">@dimen/settings_menu_padding_left</item>
+        <item name="android:paddingTop">@dimen/settings_menu_padding_top</item>
+        <item name="android:paddingBottom">@dimen/settings_menu_padding_bottom</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/list_background</item>
     </style>
 
 </resources>
