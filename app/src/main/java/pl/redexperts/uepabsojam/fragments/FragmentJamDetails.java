@@ -163,10 +163,10 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.cancel_button:
-                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamUsers(), true);
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamUsers(false), true);
                 break;
             case R.id.save_button:
-                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamUsers(), true);
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamUsers(false), true);
                 break;
             case R.id.rate_jam_button:
                 System.out.println("adfag");
