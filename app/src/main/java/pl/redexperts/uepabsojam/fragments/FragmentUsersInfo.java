@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -12,8 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.getbase.floatingactionbutton.FloatingActionButton;
 
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import pl.redexperts.uepabsojam.R;
@@ -31,6 +35,7 @@ public class FragmentUsersInfo extends Fragment implements View.OnClickListener{
     private RoundImage roundedImage;
     private RelativeLayout usersButton;
     private RelativeLayout joinButton;
+    private FloatingActionButton rateButton;
 
 //    #### Params
     private String title = "Build your awesome app. The best JAM ever.";
@@ -90,6 +95,10 @@ public class FragmentUsersInfo extends Fragment implements View.OnClickListener{
         jam2.setOnClickListener(this);
         jam3.setOnClickListener(this);
         jam4.setOnClickListener(this);
+
+        rateButton = (com.getbase.floatingactionbutton.FloatingActionButton) view.findViewById(R.id.rate_jam_button);
+
+        rateButton.setOnClickListener(this);
         return view;
     }
 
@@ -108,23 +117,33 @@ public class FragmentUsersInfo extends Fragment implements View.OnClickListener{
 
             case R.id.jam1 :
                 bundle.putString("jam", jam1.getText().toString());
+                bundle.putBoolean("nie", true);
                 fragmentJamDetails.setArguments(bundle);
                 FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
                 break;
             case R.id.jam2 :
                 bundle.putString("jam", jam2.getText().toString());
+                bundle.putBoolean("nie", true);
                 fragmentJamDetails.setArguments(bundle);
                 FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
                 break;
             case R.id.jam3 :
                 bundle.putString("jam", jam3.getText().toString());
+                bundle.putBoolean("nie", true);
                 fragmentJamDetails.setArguments(bundle);
                 FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
                 break;
             case R.id.jam4 :
                 bundle.putString("jam", jam4.getText().toString());
+                bundle.putBoolean("nie", true);
                 fragmentJamDetails.setArguments(bundle);
                 FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
+                break;
+            case R.id.rate_jam_button:
+                System.out.println("adfag");
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                DialogFragmentUserRate dialogRate = new DialogFragmentUserRate();
+                dialogRate.show(fm, "dialog_fragment_add_meeting");
                 break;
          }
     }

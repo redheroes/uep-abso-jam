@@ -78,7 +78,11 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
         switch (item.getItemId()) {
             case R.id.jam_details:
                 //TODO: show details
-                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
+                Bundle bundle = new Bundle();
+                bundle.putString("jam", jam);
+                FragmentJamDetails fragmentJamDetails = new FragmentJamDetails();
+                fragmentJamDetails.setArguments(bundle);
+                FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
                 return true;
             default:
                 return false;
@@ -110,7 +114,7 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
         listView.setAdapter(adapter);
         registerForContextMenu(listView);
 
-        spinner.setSelection(1, true);
+        spinner.setSelection(0, true);
         spinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
                     @Override

@@ -105,11 +105,15 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
 
         if (bundle != null && bundle.getString("jam") != null) {
             jamTitle.setText(bundle.getString("jam"));
+
+        }
+        if(bundle != null && bundle.getBoolean("nie") == true){
             View view1 = getView().findViewById(R.id.buttons);
             if(view1 != null){
                 view1.setVisibility(View.GONE);
             }
         }
+
     }
 
     @Override
