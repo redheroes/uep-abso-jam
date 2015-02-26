@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialAccount;
+import pl.redexperts.uepabsojam.fragments.FragmentJamDetails;
 import pl.redexperts.uepabsojam.fragments.FragmentJams;
 import pl.redexperts.uepabsojam.fragments.FragmentMyJams;
 
