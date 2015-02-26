@@ -12,7 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:theme="@style/ActionBarThemeOverlay"
-    android:background="@color/main_color"/>
+    android:background="@color/slidingmenu_background"/>
 
 <ScrollView
     android:layout_width="match_parent"
