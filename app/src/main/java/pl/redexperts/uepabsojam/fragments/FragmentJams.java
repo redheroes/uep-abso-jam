@@ -30,7 +30,7 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
 
     private AdapterJams adapter;
     private Jam jam;
-    public static ArrayList<Jam> jams = new ArrayList<>();
+    public static ArrayList<Jam> jams;
     public final static String KEY_BUNDLE = "jam";
 
     public Bundle getJamBundle() {
@@ -41,8 +41,14 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
 
     public void getJamsFromServer() {
         if (jams.size() > 0) {
-            adapter.add(jams.get(jams.size() - 1));
-            adapter.notifyDataSetChanged();
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    adapter.clear();
+                    adapter.addAll(jams);
+                    adapter.notifyDataSetChanged();
+                }
+            });
         }
     }
 
@@ -79,6 +85,7 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        jams = new ArrayList<>();
         return inflater.inflate(R.layout.fragment_jam_list, container, false);
     }
 
@@ -96,7 +103,7 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
                 Fragment fragment = new FragmentJamDetails();
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("key", jam);
-                setArguments(bundle);
+                fragment.setArguments(bundle);
                 FragmentHelper.showFragment(getActivity(), R.id.content,fragment
                         , true);
 

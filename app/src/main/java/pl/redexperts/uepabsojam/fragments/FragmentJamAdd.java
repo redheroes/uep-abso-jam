@@ -63,8 +63,14 @@ public class FragmentJamAdd extends Fragment
                 editTime.getText().toString()));
 
         //listener.onJamAdd(jam);
+
         FragmentJams.jams.add(jam);
 
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         KeyboardUtils.hideKeyboard(getActivity());
         getFragmentManager().popBackStack();
     }

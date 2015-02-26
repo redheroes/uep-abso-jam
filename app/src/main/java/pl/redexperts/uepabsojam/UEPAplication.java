@@ -4,22 +4,26 @@ import android.accounts.Account;
 import android.app.Application;
 import android.location.Location;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+
+import pl.redexperts.uepabsojam.model.Jam;
 
 public class UEPAplication extends Application {
 
     private static Account             account;
-    private static WillcareApplication instance;
+    private static Application instance;
     private String accessToken = null;
     private Location userLocation;
     private Calendar lastLocationUpdateDate;
+    public static ArrayList<Jam> jams;
 
     public UEPAplication() {
         super();
         instance = this;
     }
 
-    public static WillcareApplication getInstance() {
+    public static Application getInstance() {
         return instance;
     }
 

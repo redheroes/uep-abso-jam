@@ -37,6 +37,7 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
     private ArrayList<String> jamsOrganized;
     public final static String KEY_BUNDLE = "jam";
     private Spinner spinner;
+    private int positionNew;
 
     public void getJamsFromServer() {
         //TODO: add mock jams
@@ -80,9 +81,25 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
                 //TODO: show details
                 Bundle bundle = new Bundle();
                 bundle.putString("jam", jam);
-                FragmentJamDetails fragmentJamDetails = new FragmentJamDetails();
-                fragmentJamDetails.setArguments(bundle);
-                FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
+                switch (positionNew){
+                    case 0 :
+
+                        FragmentJamUsers fragmentJamUsers = new FragmentJamUsers();
+                        fragmentJamUsers.setArguments(bundle);
+                        FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamUsers, true);
+                        break;
+                    case 1 :
+                        FragmentJamUsers fragmentJamUsers2 = new FragmentJamUsers();
+                        fragmentJamUsers2.setArguments(bundle);
+                        FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamUsers2, true);
+                        break;
+                    case 2:
+                        FragmentJamDetails fragmentJamDetails = new FragmentJamDetails();
+                        fragmentJamDetails.setArguments(bundle);
+                        FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
+                        break;
+                }
+
                 return true;
             default:
                 return false;
@@ -120,6 +137,7 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
+                        positionNew = position;
                         switch (position){
                             case 0 :
                                 updateUi(jamsFuture);
