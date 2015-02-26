@@ -51,9 +51,19 @@
             style="@style/measuremets_list_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/text_persons_number"
+            android:id="@+id/text_current_persons_number"
             android:gravity="bottom"
-            android:text="15/56"
+            android:text="15/"
+            android:textSize="@dimen/list_item_text_size"
+            />
+
+        <TextView
+            style="@style/jam_list_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_total_persons_number"
+            android:gravity="bottom"
+            android:text="56"
             android:textSize="@dimen/list_item_text_size"
             />
 

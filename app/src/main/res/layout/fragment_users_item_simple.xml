@@ -46,7 +46,7 @@
         android:layout_marginLeft="@dimen/layout_padding_left"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/default_text_size"
-        android:id="@+id/text_current_persons_number"
+        android:id="@+id/text_persons_number"
         android:layout_below="@+id/text_jam_name"
         android:gravity="bottom"
         android:text="Umiem: Programować"
@@ -64,26 +64,7 @@
         android:layout_marginRight="@dimen/activity_right_padding"
         android:src="@drawable/dots_vertical"/>
 
-    <ImageView
-        android:layout_alignLeft="@+id/evaluation"
-        android:id="@+id/icon"
-        android:layout_marginTop="20dp"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_alignTop="@id/evaluation"
-        android:layout_below="@id/evaluation"
-        android:src="@drawable/minus_circle_outline"/>
 
-    <ImageView
-        android:layout_alignLeft="@+id/evaluation"
-        android:id="@+id/icon2"
-        android:layout_marginTop="20dp"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_alignTop="@id/evaluation"
-        android:layout_below="@id/evaluation"
-        android:src="@drawable/checkbox_marked_circle_outline"
-        android:visibility="gone"/>
 
     <View
         android:layout_width="wrap_content"

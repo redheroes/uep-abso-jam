@@ -10,7 +10,8 @@ public class Jam implements Serializable{
     String street;
     String houseNumber;
     String city;
-    Integer peopleNumber;
+    Integer neededPeopleNumber;
+    Integer currentPeopleNumber = 0;
     Date date;
     String description;
 
@@ -62,12 +63,12 @@ public class Jam implements Serializable{
         this.city = city;
     }
 
-    public Integer getPeopleNumber() {
-        return peopleNumber;
+    public Integer getNeededPeopleNumber() {
+        return neededPeopleNumber;
     }
 
-    public void setPeopleNumber(Integer peopleNumber) {
-        this.peopleNumber = peopleNumber;
+    public void setNeededPeopleNumber(Integer neededPeopleNumber) {
+        this.neededPeopleNumber = neededPeopleNumber;
     }
 
     public String getDescription() {
@@ -76,5 +77,13 @@ public class Jam implements Serializable{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Integer getCurrentPeopleNumber() {
+        return currentPeopleNumber;
+    }
+
+    public void setCurrentPeopleNumber(Integer currentPeopleNumber) {
+        this.currentPeopleNumber = currentPeopleNumber;
     }
 }
