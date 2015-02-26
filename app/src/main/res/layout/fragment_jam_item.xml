@@ -4,7 +4,6 @@
     android:layout_height="@dimen/alert_users_list_item_height"
     android:id="@+id/layout_jam_item"
     android:paddingTop="16dp"
-    android:scrollbars="none"
     >
 
    
@@ -80,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="@dimen/activity_right_padding"
+        android:layout_marginRight="12dp"
         android:src="@drawable/dots_vertical"/>
 
     <View

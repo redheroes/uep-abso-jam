@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/abso_list_background"
     android:clickable="true"
+    android:scrollbars="none"
     android:orientation="vertical">
 
 
