@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/alert_users_person_image_size"
+    android:id="@+id/layout_jam_item"
+    >
+
+    <ImageView
+        android:layout_marginLeft="16dp"
+        android:id="@+id/image"
+        android:layout_marginTop="16dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_account"/>
+   
+    <TextView
+        style="@style/measuremets_list_text"
+        android:layout_marginLeft="@dimen/layout_padding_left"
+        android:layout_alignTop="@id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marek Biernacki"
+        android:id="@+id/text_jam_name"
+        android:textSize="@dimen/fragment_settings_textSize"
+        android:textColor="@color/alert_users_bold_text"
+
+        />
+
+    <TextView
+        style="@style/measuremets_list_text"
+        android:layout_alignParentLeft="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ocena: 5,5"
+        android:layout_alignBottom="@id/text_jam_name"
+
+        android:id="@+id/evaluation"
+        android:textSize="@dimen/fragment_settings_textSize"
+        android:textColor="@color/alert_users_bold_text"
+        android:layout_toLeftOf="@id/jam_menu_button"
+
+        />
+
+    <TextView
+        style="@style/measuremets_list_text"
+        android:layout_marginLeft="@dimen/layout_padding_left"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_text_size"
+        android:id="@+id/text_persons_number"
+        android:layout_below="@+id/text_jam_name"
+        android:gravity="bottom"
+        android:text="Umiem: Programować"
+        android:layout_alignBottom="@id/text_date"
+        android:textSize="@dimen/list_item_text_size"
+        />
+
+
+    <ImageView
+        android:id="@+id/jam_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/evaluation"
+        android:layout_marginRight="@dimen/activity_right_padding"
+        android:src="@drawable/dots_vertical"/>
+
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/alert_users_spacer_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/alert_users_spacer_color"></View>
+
+</RelativeLayout>

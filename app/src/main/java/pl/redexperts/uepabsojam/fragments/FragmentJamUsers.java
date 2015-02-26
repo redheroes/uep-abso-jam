@@ -2,25 +2,25 @@ package pl.redexperts.uepabsojam.fragments;
 
 
 import android.app.Activity;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.PopupMenu;
-import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import pl.redexperts.uepabsojam.R;
-import pl.redexperts.uepabsojam.adapters.AdapterMyJams;
+import pl.redexperts.uepabsojam.adapters.AdapterUsersSimple;
 import pl.redexperts.uepabsojam.listeners.OnArrayListContextMenuListener;
 import pl.redexperts.utils.FragmentHelper;
 import pl.redexperts.utils.PopupUtils;
@@ -32,15 +32,14 @@ public class FragmentJamUsers extends android.support.v4.app.Fragment implements
         OnArrayListContextMenuListener {
 
 
-    private static final String TAG = FragmentMyJams.class.getSimpleName();
+    private static final String TAG = FragmentUsersList.class.getSimpleName();
 
-    private AdapterMyJams adapter;
+    private AdapterUsersSimple adapter;
     private String jam;
     private ArrayList<String> jamsFuture;
     private ArrayList<String> jamsGone;
     private ArrayList<String> jamsOrganized;
     public final static String KEY_BUNDLE = "jam";
-    private Spinner spinner;
 
     public void getJamsFromServer() {
         //TODO: add mock jams
@@ -53,28 +52,33 @@ public class FragmentJamUsers extends android.support.v4.app.Fragment implements
         jam = adapter.getItem(position);
 
         PopupUtils.showPopup(getActivity(), view.findViewById(R.id.jam_menu_button),
-                this, R.menu.my_jams_context_menu);
+                this, R.menu.users_list_context_menu_simple);
     }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         MenuInflater inflater = getActivity().getMenuInflater();
-        inflater.inflate(R.menu.jams_context_menu, menu);
+        inflater.inflate(R.menu.users_list_context_menu_simple, menu);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_my_jams, container, false);
+        View view = inflater.inflate(R.layout.fragment_users_list, container, false);
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+
+        MaterialNavigationDrawer activity = (MaterialNavigationDrawer) getActivity();
+        activity.setSupportActionBar(toolbar);
+        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setTitle("Uczestnicy Jamu");
+        return view;
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        jamsFuture = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.jams_future)));
-        jamsGone = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.jams_gone)));
-        jamsOrganized = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.jams_organized)));
+        jamsFuture = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.users)));
     }
 
     @Override
@@ -82,7 +86,7 @@ public class FragmentJamUsers extends android.support.v4.app.Fragment implements
         switch (item.getItemId()) {
             case R.id.jam_details:
                 //TODO: show details
-                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersInfo(), true);
                 return true;
             default:
                 return false;
@@ -99,7 +103,7 @@ public class FragmentJamUsers extends android.support.v4.app.Fragment implements
     }
 
     private void setFragmentElements() {
-        adapter = new AdapterMyJams(getActivity(), R.id.jams_list_container, jamsFuture);
+        adapter = new AdapterUsersSimple(getActivity(), R.id.jams_list_container, jamsFuture);
         adapter.setOnContextMenuClickListener(this);
 
         ArrayAdapter adapterJams = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
@@ -107,37 +111,10 @@ public class FragmentJamUsers extends android.support.v4.app.Fragment implements
 
         adapterJams.setDropDownViewResource(R.layout.spinner_text_view);
 
-        spinner = (Spinner) getView().findViewById(R.id.spinner_my_jams);
-        spinner.setAdapter(adapterJams);
 
         ListView listView = ((ListView) getView().findViewById(R.id.jams_list_container));
         listView.setAdapter(adapter);
         registerForContextMenu(listView);
-
-        spinner.setSelection(1, true);
-        spinner.setOnItemSelectedListener(
-                new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-
-                        switch (position){
-                            case 0 :
-                                updateUi(jamsFuture);
-                                break;
-                            case 1 :
-                                updateUi(jamsGone);
-                                break;
-                            case 2:
-                                updateUi(jamsOrganized);
-                                break;
-                        }
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
     }
 
     private void updateUi(ArrayList<String> jams) {

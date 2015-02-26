@@ -23,8 +23,6 @@
         />
 
 
-
-
     <ImageView
         android:id="@+id/jam_menu_button"
         android:layout_marginTop="16dp"
