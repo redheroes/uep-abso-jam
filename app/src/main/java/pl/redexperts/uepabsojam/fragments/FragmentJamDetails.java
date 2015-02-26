@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
+import java.text.SimpleDateFormat;
+
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import pl.redexperts.uepabsojam.R;
 import pl.redexperts.uepabsojam.model.Jam;
@@ -128,8 +130,30 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
                     jamTitle.setText(jam.getName());
                 }
 
-                if (jam.getName() != null) {
-                    jamTitle.setText(jam.getName());
+                String where = "";
+
+                if (jam.getCity() != null) {
+                    where = where.concat(jam.getCity() + ", ");
+                }
+
+                if (jam.getStreet() != null) {
+                    where = where.concat(jam.getCity() + ", ");
+                }
+
+                if (jam.getHouseNumber() != null) {
+                    where = where.concat(jam.getHouseNumber());
+                }
+                jamWhere.setText(where);
+
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd HH:mm");
+                jamTitle.setText(sdf.format(jam.getDate()));
+
+                if (jam.getDescription() != null) {
+                    jamDetails.setText(jam.getDescription());
+                }
+
+                if (jam.getNeededPeopleNumber() != null && jam.getCurrentPeopleNumber() != null) {
+                    jamUsers.setText(jam.getCurrentPeopleNumber() + "/" + jam.getNeededPeopleNumber());
                 }
             }
         }
