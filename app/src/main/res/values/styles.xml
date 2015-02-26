@@ -108,7 +108,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">left</item>
         <item name="android:textSize">@dimen/default_text_size</item>
-        <item name="android:textColor">@color/alert_users_bold_text</item>
+        <item name="android:textColor">@android:color/white</item>
         <item name="android:textColorHint">@color/edit_text_unselected</item>
     </style>
 
