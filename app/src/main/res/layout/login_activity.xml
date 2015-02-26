@@ -40,6 +40,7 @@
 
                 <TextView
                     android:gravity="center"
+                    android:textStyle="bold"
                     style="@style/edit_text"
                     android:textSize="20dp"
                     android:layout_marginTop="@dimen/login_margin_top"
@@ -47,6 +48,7 @@
                     />
 
                 <TextView
+                    android:textStyle="bold"
                     android:gravity="center"
                     style="@style/edit_text"
                     android:textAlignment="center"
@@ -57,6 +59,7 @@
                 <Button
                     android:id="@+id/login"
                     android:gravity="center"
+                    android:textStyle="bold"
                     style="@style/edit_text"
                     android:layout_marginTop="@dimen/login_margin_top"
                     android:background="@drawable/button_text_selector"
@@ -64,6 +67,7 @@
                   />
 
                 <TextView
+                    android:textColor="@android:color/white"
                     android:id="@+id/login_validation"
                     style="@style/validator"
                     android:text="@string/validator_field_required"
@@ -73,6 +77,7 @@
 
                 <Button
                     android:id="@+id/password"
+                    android:textStyle="bold"
                     android:gravity="center"
                     style="@style/edit_text"
                     android:layout_gravity="center"
