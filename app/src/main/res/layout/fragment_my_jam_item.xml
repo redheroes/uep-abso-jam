@@ -10,14 +10,16 @@
 
     <TextView
         style="@style/measuremets_list_text"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:id="@+id/text_jam_name"
         android:textSize="@dimen/list_item_large_text_size"
+        android:lines="2"
         android:textColor="@color/alert_users_bold_text"
         android:layout_marginBottom="16dp"
+        android:text="dsfgfdsh"
         />
 
 

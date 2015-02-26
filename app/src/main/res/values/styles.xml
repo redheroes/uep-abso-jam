@@ -161,6 +161,7 @@
         <item name="android:textColor">@color/abso_actionbar_title</item>
     </style>
 
+
     <style name="validator">
         <item name="android:textSize">@dimen/validator_text_size</item>
         <item name="android:textColor">@color/abso_list_background_red</item>

@@ -1,0 +1,222 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/abso_list_background">
+
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/scrollView"
+    android:background="@color/abso_list_background"
+    android:layout_gravity="center_horizontal"
+    android:scrollbars="none">
+
+
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="pl.redexperts.uepabsojam.fragments.FragmentJamDetails"
+    android:orientation="vertical"
+        android:background="@color/abso_list_background">
+
+
+    <include layout="@layout/cancel_save_buttons"
+        android:id="@+id/buttons"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    style="@style/edit_text_title"
+                    android:text="Imię" />
+
+                <EditText
+                    android:id="@+id/name"
+                    style="@style/edit_text_number"
+                    android:text="Mariusz"
+                    android:background="@drawable/edit_text_selector" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    style="@style/edit_text_title"
+                    android:text="Nazwisko" />
+
+                <EditText
+                    android:text="Czerkawski"
+                    android:id="@+id/surname"
+                    style="@style/edit_text_number"
+                    android:background="@drawable/edit_text_selector" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="2"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    style="@style/edit_text_title"
+                    android:text="Email" />
+
+                <EditText
+                    android:text="marianno@czerc.pl"
+                    android:id="@+id/email"
+                    style="@style/edit_text_number"
+                    android:background="@drawable/edit_text_selector" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    style="@style/edit_text_title"
+                    android:text="Kierunek" />
+
+                <EditText
+                    android:text="hokeistyka stosowana"
+                    android:id="@+id/jam_address_number"
+                    style="@style/edit_text_number"
+                    android:background="@drawable/edit_text_selector" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/edit_text_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_view_margin_top"
+                    android:text="Kiedy" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_padding"
+                        android:layout_height="@dimen/image_padding"
+                        android:layout_marginLeft="@dimen/image_padding"
+                        android:src="@drawable/calendar_text" />
+
+
+                    <TextView
+                        android:id="@+id/last_examination_date"
+                        style="@style/text_view"
+                        android:text="2015.05.12"
+                        android:background="@drawable/edit_text_selector"
+                        android:focusable="false"
+                        android:inputType="datetime"
+                        android:longClickable="false"
+                        android:textColorHint="@android:color/darker_gray" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    style="@style/edit_text_title"
+                    android:text="Pracuje" />
+
+                <EditText
+                    android:text="Urząd Skarbowy"
+                    android:id="@+id/job"
+                    style="@style/edit_text_number"
+                    android:background="@drawable/edit_text_selector" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    style="@style/edit_text_title"
+                    android:text="Umiejętności" />
+
+                <EditText
+                    android:text="uderzanie krążka"
+                    android:id="@+id/skills"
+                    style="@style/edit_text_number"
+                    android:background="@drawable/edit_text_selector" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+</LinearLayout>
