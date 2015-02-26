@@ -15,6 +15,17 @@ public class Jam implements Serializable{
     Date date;
     String description;
 
+    public Jam() {
+    }
+
+    public Jam(long id, String name, Integer neededPeopleNumber, Integer currentPeopleNumber, Date date) {
+        this.id = id;
+        this.name = name;
+        this.neededPeopleNumber = neededPeopleNumber;
+        this.currentPeopleNumber = currentPeopleNumber;
+        this.date = date;
+    }
+
     public long getId() {
         return id;
     }

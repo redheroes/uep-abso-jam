@@ -1,5 +1,6 @@
 package pl.redexperts.uepabsojam.fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.ContextMenu;
@@ -12,6 +13,8 @@ import android.widget.ListView;
 import android.widget.PopupMenu;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
 
 import pl.redexperts.uepabsojam.R;
 import pl.redexperts.uepabsojam.adapters.AdapterJams;
@@ -31,15 +34,35 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
     private AdapterJams adapter;
     private Jam jam;
     public static ArrayList<Jam> jams;
-    public final static String KEY_BUNDLE = "jam";
+    public boolean loaded = false;
 
-    public Bundle getJamBundle() {
-        Bundle bundle = new Bundle();
-        bundle.putSerializable(KEY_BUNDLE, jam);
-        return bundle;
-    }
+
 
     public void getJamsFromServer() {
+
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        if (!loaded){
+            jams = new ArrayList<Jam>(){{add(new Jam(1L, "Sprzedarz piłeczek tenisowych", 5, 3, new Date(121212)));
+                add(new Jam(1L, "Sprzedarz piłeczek tenisowych", 5, 3, new Date(6544454)));
+                add(new Jam(1L, "Stworzenie nowej metodologii we wdrażaniu procesów w firmach.", 5, 3, new Date(324324)));
+                add(new Jam(1L, "Przeniesienie produkcji do Chin, bo tutaj za drogo. Zaplanowanie całości przedsięwzięcia i koordynacja.", 5, 3, new Date(121212)));
+                add(new Jam(1L, "Wyimaginowany przyjaciel, jak z tym żyć.", 5, 3, new Date(5664654)));
+                add(new Jam(1L, "Kajakiem przez świat, co zabrać ze sobą prócz kajaka?", 5, 3, new Date(65436435)));
+                add(new Jam(1L, "Pomóż uratować lasy deszczone.", 5, 3, new Date(265436526)));
+                add(new Jam(1L, "Build your awesome app. The best JAM ever.", 5, 3, new Date(121212)));
+                add(new Jam(1L, "Design thinking. Stwórz z nami nasz nowy produkt - WBK", 5, 3, new Date(523626)));
+                add(new Jam(1L, "Stwórzmy scenariusz gry planszowej, mam zarys pomysłu.", 5, 3, new Date(5432553)));
+                add(new Jam(1L, "Pomóż uratować lasy deszczone.", 5, 3, new Date(64577775)));
+                add(new Jam(1L, "Przeniesienie produkcji do Chin, bo tutaj za drogo. Zaplanowanie całości przedsięwzięcia i koordynacja.", 5, 3, new Date(1275471212)));
+                add(new Jam(1L, "Stwórzmy scenariusz gry planszowej, mam zarys pomysłu.", 5, 3, new Date(257444444)));
+            }};
+            loaded = true;
+        }
         if (jams.size() > 0) {
             getActivity().runOnUiThread(new Runnable() {
                 @Override
@@ -85,8 +108,15 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        jams = new ArrayList<>();
+        jams = new ArrayList<Jam>();
+
         return inflater.inflate(R.layout.fragment_jam_list, container, false);
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
     }
 
     @Override

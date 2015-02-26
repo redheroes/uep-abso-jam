@@ -4,6 +4,7 @@
     android:layout_height="@dimen/alert_users_list_item_height"
     android:id="@+id/layout_jam_item"
     android:paddingTop="16dp"
+    android:scrollbars="none"
     >
 
    
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:gravity="bottom"
-        android:layout_below="@+id/jam_menu_button"
+        android:layout_below="@+id/text_jam_name"
         android:text="13.03.2015"
         android:layout_marginRight="@dimen/activity_right_padding"
         android:textSize="@dimen/list_item_text_size"
@@ -23,20 +24,21 @@
 
     <TextView
         style="@style/measuremets_list_text"
-        android:layout_width="wrap_content"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
+        android:lines="2"
         android:text="Nazwa Jamu"
         android:id="@+id/text_jam_name"
-        android:textSize="@dimen/list_item_large_text_size"
+        android:textSize="16dp"
         android:textColor="@color/alert_users_bold_text"
         />
 
     <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/default_text_size"
+        android:layout_height="16dp"
         android:layout_below="@id/text_jam_name"
         android:gravity="bottom"
-        android:layout_alignBottom="@id/text_date"
         android:orientation="horizontal">
         <TextView
             style="@style/measuremets_list_text"
