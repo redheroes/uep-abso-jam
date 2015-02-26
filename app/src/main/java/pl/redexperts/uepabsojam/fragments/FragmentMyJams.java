@@ -84,12 +84,12 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
                 switch (positionNew){
                     case 0 :
 
-                        FragmentJamUsers fragmentJamUsers = new FragmentJamUsers();
+                        FragmentJamUsers fragmentJamUsers = new FragmentJamUsers(false);
                         fragmentJamUsers.setArguments(bundle);
                         FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamUsers, true);
                         break;
                     case 1 :
-                        FragmentJamUsers fragmentJamUsers2 = new FragmentJamUsers();
+                        FragmentJamUsers fragmentJamUsers2 = new FragmentJamUsers(false);
                         fragmentJamUsers2.setArguments(bundle);
                         FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamUsers2, true);
                         break;

@@ -2,8 +2,8 @@ package pl.redexperts.uepabsojam.fragments;
 
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
@@ -28,9 +28,11 @@ import pl.redexperts.utils.PopupUtils;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentJamUsers extends android.support.v4.app.Fragment implements PopupMenu.OnMenuItemClickListener,
+public class FragmentJamUsers extends Fragment implements PopupMenu.OnMenuItemClickListener,
         OnArrayListContextMenuListener {
 
+
+    private boolean insert_toolbar;
 
     private static final String TAG = FragmentUsersList.class.getSimpleName();
 
@@ -45,7 +47,9 @@ public class FragmentJamUsers extends android.support.v4.app.Fragment implements
         //TODO: add mock jams
     }
 
-
+    public FragmentJamUsers(boolean insert_toolbar) {
+        this.insert_toolbar = insert_toolbar;
+    }
 
     @Override
     public void onContextMenuClicked(int position, View view) {
@@ -66,12 +70,16 @@ public class FragmentJamUsers extends android.support.v4.app.Fragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_users_list, container, false);
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         MaterialNavigationDrawer activity = (MaterialNavigationDrawer) getActivity();
         activity.setSupportActionBar(toolbar);
         activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle("Uczestnicy Jamu");
+        if (insert_toolbar==true){
+            activity.getSupportActionBar().hide();
+        }
+
         return view;
     }
 
