@@ -1,68 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+
 
     <TextView
-        android:id="@+id/labelOrg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/rate_organize_text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <RatingBar
-        android:id="@+id/ratingBarOrg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:stepSize="1.0"
-        android:rating="0.0"
-        android:layout_toRightOf="@+id/labelOrg"/>
-
-    <TextView
-        android:id="@+id/labelTopic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rate_topic_text"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_alignBottom="@+id/labelOrg"/>
+        android:text="@string/rate_organize_text"
+        android:id="@+id/textView"
+        android:layout_gravity="left"
+        android:gravity="top"
+        android:layout_weight="1" />
 
     <RatingBar
-        android:id="@+id/ratingBarTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numStars="5"
-        android:stepSize="1.0"
-        android:rating="0.0"
-        android:layout_toRightOf="@+id/labelTopic"/>
+        android:id="@+id/ratingBar"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_weight="1"
+        android:stepSize="1"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/rate_topic_text"
+        android:id="@+id/textView2"
+        android:layout_weight="1"
+        android:layout_gravity="left|top" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar2"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_weight="1"
+        android:stepSize="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/rate_effect_text"
+        android:id="@+id/textView3"
+        android:layout_weight="1"
+        android:layout_gravity="left|top" />
+
+    android:stepSize="1"
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar3"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_weight="1"/>
 
     <Button
-        android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:text="Zapisz"
+        android:padding="5dp"
+        android:id="@+id/rate_save_button"
+        android:layout_gravity="right|top"
+        android:layout_weight="1"
+        android:background="@drawable/button_text_selector"
+        />
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <TextView
-            android:id="@+id/lblResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Result : "
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/txtRatingValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>

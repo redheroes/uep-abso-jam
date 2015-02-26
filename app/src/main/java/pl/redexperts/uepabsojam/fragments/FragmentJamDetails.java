@@ -3,12 +3,15 @@ package pl.redexperts.uepabsojam.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.getbase.floatingactionbutton.FloatingActionButton;
 
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import pl.redexperts.uepabsojam.R;
@@ -24,6 +27,7 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
     private TextView jamDetails;
     private RelativeLayout usersButton;
     private RelativeLayout joinButton;
+    private FloatingActionButton rateButton;
 
 //    #### Params
     private String title = "Build your awesome app. The best JAM ever.";
@@ -91,9 +95,11 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
 
         joinButton = (RelativeLayout) getView().findViewById(R.id.cancel_button);
         usersButton = (RelativeLayout) getView().findViewById(R.id.save_button);
+        rateButton = (com.getbase.floatingactionbutton.FloatingActionButton) getView().findViewById(R.id.rate_jam_button);
 
         joinButton.setOnClickListener(this);
         usersButton.setOnClickListener(this);
+        rateButton.setOnClickListener(this);
 
         Bundle bundle = getArguments();
 
@@ -114,6 +120,12 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
                 break;
             case R.id.save_button :
                 FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersList(), true);
+                break;
+            case R.id.rate_jam_button:
+                System.out.println("adfag");
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                DialogFragmentRate dialogRate = new DialogFragmentRate();
+                dialogRate.show(fm, "dialog_fragment_add_meeting");
                 break;
          }
     }
