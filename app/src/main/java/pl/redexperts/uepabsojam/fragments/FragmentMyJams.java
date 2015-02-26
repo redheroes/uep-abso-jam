@@ -81,20 +81,19 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
                 //TODO: show details
                 Bundle bundle = new Bundle();
                 bundle.putString("jam", jam);
+                FragmentJamDetails fragmentJamDetails = new FragmentJamDetails();
+
                 switch (positionNew){
                     case 0 :
-
-                        FragmentJamUsers fragmentJamUsers = new FragmentJamUsers(false);
-                        fragmentJamUsers.setArguments(bundle);
-                        FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamUsers, true);
+                        fragmentJamDetails.setArguments(bundle);
+                        FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
                         break;
                     case 1 :
-                        FragmentJamUsers fragmentJamUsers2 = new FragmentJamUsers(false);
-                        fragmentJamUsers2.setArguments(bundle);
-                        FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamUsers2, true);
+                        fragmentJamDetails.setArguments(bundle);
+                        FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
                         break;
                     case 2:
-                        FragmentJamDetails fragmentJamDetails = new FragmentJamDetails();
+                        bundle.putBoolean("organized", true);
                         fragmentJamDetails.setArguments(bundle);
                         FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
                         break;

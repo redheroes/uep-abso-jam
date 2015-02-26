@@ -31,7 +31,7 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
     private RelativeLayout usersButton;
     private RelativeLayout joinButton;
     private FloatingActionButton rateButton;
-
+    private boolean organized = false;
     //    #### Params
     private String title = "Build your awesome app. The best JAM ever.";
     private String when = "12.05.2015 12:55";
@@ -108,6 +108,12 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
             jamTitle.setText(bundle.getString("jam"));
 
         }
+        if (bundle != null && bundle.getSerializable("key") != null) {
+            jamTitle.setText(bundle.getString("key"));
+        }
+        if (bundle != null && bundle.getBoolean("organized")) {
+            organized = true;
+        }
         if (bundle != null && bundle.getBoolean("nie") == true) {
             View view1 = getView().findViewById(R.id.buttons);
             if (view1 != null) {
@@ -146,7 +152,6 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
                 jamWhere.setText(where);
 
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd HH:mm");
-                jamTitle.setText(sdf.format(jam.getDate()));
 
                 if (jam.getDescription() != null) {
                     jamDetails.setText(jam.getDescription());
@@ -163,10 +168,20 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.cancel_button:
-                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamUsers(false), true);
+                if (organized){
+                    FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersList(), true);
+                }
+                else {
+                    FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamUsers(false), true);
+                }
                 break;
             case R.id.save_button:
-                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamUsers(false), true);
+                if (organized){
+                    FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersList(), true);
+                }
+                else {
+                    FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamUsers(false), true);
+                }
                 break;
             case R.id.rate_jam_button:
                 System.out.println("adfag");
