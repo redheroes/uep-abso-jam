@@ -3,7 +3,7 @@
     android:id="@+id/menu_frame"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:background="@color/willcare_list_background"
+    android:background="@color/abso_list_background"
     android:clickable="true"
     android:orientation="vertical">
 

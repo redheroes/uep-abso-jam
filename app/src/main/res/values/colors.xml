@@ -7,7 +7,7 @@
     <!-- global colors, to be used below -->
     <color name="primary_dark_color">#43b872</color>
     <color name="primary_color">@android:color/white</color>
-    <color name="accent_color">@color/willcare_text_color</color>
+    <color name="accent_color">@color/abso_text_color</color>
     <color name="light_grey">#e0e0e0</color>
 
     <!-- sliding menu -->
@@ -16,13 +16,13 @@
     <color name="slidingmenu_divider">#bbbbbb</color>
 
     <!-- actionbar -->
-    <color name="willcare_actionbar_title">@color/primary_dark_color</color>
+    <color name="abso_actionbar_title">@color/primary_dark_color</color>
 
     <!-- lists -->
-    <color name="willcare_list_background">#e7e7e7</color>
-    <color name="willcare_list_background_pressed">@color/black_59pc</color>
-    <color name="willcare_list_background_red">#f06664</color>
-    <color name="willcare_button_float_color">@color/primary_dark_color</color>
+    <color name="abso_list_background">#e7e7e7</color>
+    <color name="abso_list_background_pressed">@color/black_59pc</color>
+    <color name="abso_list_background_red">#f06664</color>
+    <color name="abso_button_float_color">@color/primary_dark_color</color>
 
     <color name="alert_users_bold_text">@color/black_87pc</color>
     <color name="alert_users_nonbold_text">#84000000</color>
@@ -32,7 +32,7 @@
 
     <color name="black_overlay">#66000000</color>
     <color name="guardian_status_unselected">#bbbbbb</color>
-    <color name="willcare_text_color">#02532A</color>
+    <color name="abso_text_color">#02532A</color>
     <color name="edit_text_unselected">#9d9d9d</color>
 
     <color name="fragment_settings_divider">@color/black_9pc</color>

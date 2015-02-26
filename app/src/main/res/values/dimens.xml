@@ -5,7 +5,7 @@
     <dimen name="activity_right_padding">22dp</dimen>
 
     <!-- actionbar sizes -->
-    <dimen name="willcare_actionbar_text_size">20dp</dimen>
+    <dimen name="abso_actionbar_text_size">20dp</dimen>
 
     <!-- lists -->
     <dimen name="alert_users_list_item_height">88dp</dimen>

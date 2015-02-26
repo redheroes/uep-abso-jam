@@ -7,7 +7,7 @@
         <item name="background">@color/primary_material_light</item>
         <item name="colorPrimary">@color/slidingmenu_background</item>
         <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
-        <item name="actionBarStyle">@style/willcareActionBar</item>
+        <item name="actionBarStyle">@style/absoActionBar</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="toolbarStyle">@style/AppThemeToolbar</item>
         <item name="android:windowActionBar">false</item>
@@ -50,7 +50,7 @@
         <item name="android:textSize">17sp</item>
         <item name="android:layout_margin">10dp</item>
         <item name="android:layout_gravity">left</item>
-        <item name="android:textColor">@color/willcare_text_color</item>
+        <item name="android:textColor">@color/abso_text_color</item>
         <item name="android:drawablePadding">10dp</item>
     </style>
 
@@ -158,12 +158,12 @@
         <item name="android:layout_gravity">left</item>
         <item name="android:textSize">@dimen/title_text_size</item>
         <item name="android:layout_marginBottom">@dimen/title_padding_bottom</item>
-        <item name="android:textColor">@color/willcare_actionbar_title</item>
+        <item name="android:textColor">@color/abso_actionbar_title</item>
     </style>
 
     <style name="validator">
         <item name="android:textSize">@dimen/validator_text_size</item>
-        <item name="android:textColor">@color/willcare_list_background_red</item>
+        <item name="android:textColor">@color/abso_list_background_red</item>
         <item name="android:layout_marginTop">@dimen/validator_margin</item>
         <item name="android:layout_marginBottom">@dimen/validator_margin</item>
         <item name="android:layout_marginLeft">@dimen/validator_margin_left</item>
@@ -178,7 +178,7 @@
         <item name="android:layout_marginLeft">@dimen/text_view_margin_left</item>
         <item name="android:layout_marginRight">@dimen/text_view_margin_right</item>
         <item name="android:layout_marginTop">@dimen/header_margin_top</item>
-        <item name="android:textColor">@color/willcare_actionbar_title</item>
+        <item name="android:textColor">@color/abso_actionbar_title</item>
     </style>
 
     <style name="subheader">
@@ -224,7 +224,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/willcare_actionbar_text_size</item>
+        <item name="android:textSize">@dimen/abso_actionbar_text_size</item>
     </style>
 
     <style name="CustomAlertDialogStyle">
@@ -251,13 +251,13 @@
         <item name="android:layout_marginLeft">@dimen/layout_margin_left</item>
     </style>
 
-    <style name="willcareActionBar" parent="Widget.AppCompat.Light.ActionBar">
+    <style name="absoActionBar" parent="Widget.AppCompat.Light.ActionBar">
         <item name="background">@android:color/white</item>
-        <item name="titleTextStyle">@style/willcareActionBarTitleStyle</item>
+        <item name="titleTextStyle">@style/absoActionBarTitleStyle</item>
     </style>
 
-    <style name="willcareActionBarTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColor">@color/willcare_actionbar_title</item>
+    <style name="absoActionBarTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/abso_actionbar_title</item>
     </style>
 
     <style name="fragment_settings_ll">
