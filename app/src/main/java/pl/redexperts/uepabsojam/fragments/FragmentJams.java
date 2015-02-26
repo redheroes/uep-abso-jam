@@ -93,8 +93,12 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.jam_details:
-//                FragmentHelper.showFragment(getActivity(), R.id.container,
-//                        new FragmentJams(), true);
+                Fragment fragment = new FragmentJamDetails();
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("key", jam);
+                setArguments(bundle);
+                FragmentHelper.showFragment(getActivity(), R.id.content,fragment
+                        , true);
 
                 return true;
 

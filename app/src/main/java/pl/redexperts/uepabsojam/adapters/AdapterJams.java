@@ -56,20 +56,24 @@ public class AdapterJams extends ArrayAdapter<Jam> {
                     .inflate(R.layout.fragment_jam_item, parent, false);
 
             holder.name = (TextView) row.findViewById(R.id.text_jam_name);
-            holder.personsNumber = (TextView) row.findViewById(R.id.text_persons_number);
+            holder.totalPersonsNumber = (TextView) row.findViewById(R.id.text_total_persons_number);
+            holder.currentPersonsNumber = (TextView) row.findViewById(R.id.text_current_persons_number);
             holder.date = (TextView) row.findViewById(R.id.text_date);
-
 
 
             if (jam != null && jam.getName() != null) {
                 holder.name.setText(jam.getName());
             }
-            if (jam != null && jam.getPeopleNumber() != null) {
-                holder.personsNumber.setText(String.valueOf(jam.getPeopleNumber()));
+            if (jam != null && jam.getNeededPeopleNumber() != null) {
+                holder.totalPersonsNumber.setText(String.valueOf(jam.getNeededPeopleNumber()));
+            }
+
+            if (jam != null && jam.getNeededPeopleNumber() != null) {
+                holder.currentPersonsNumber.setText(String.valueOf(jam.getCurrentPeopleNumber() + "/"));
             }
 
             if (jam != null && jam.getDate() != null) {
-                SimpleDateFormat format = new  SimpleDateFormat("yyyy.MM.dd");
+                SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd");
                 holder.date.setText(format.format(jam.getDate()));
             }
 
@@ -100,7 +104,7 @@ public class AdapterJams extends ArrayAdapter<Jam> {
     }
 
     private static class ViewHolder {
-        TextView name, personsNumber, date;
+        TextView name, totalPersonsNumber, currentPersonsNumber, date;
         RelativeLayout menuButton;
     }
 }

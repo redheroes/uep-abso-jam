@@ -31,8 +31,8 @@ public class FragmentJamAdd extends Fragment
     private RelativeLayout cancelButton, saveButton;
     private boolean edit = false;
     private EditText name, description, datetime, street, flatNumber, city, personsNumber;
-    private EditText editMeasureDate;
-    private EditText editMeasureTime;
+    private EditText editDate;
+    private EditText editTime;
   //  private AbsoListener.OnJamAddListener listener;
 
 
@@ -57,10 +57,10 @@ public class FragmentJamAdd extends Fragment
         jam.setStreet(street.getText().toString());
         jam.setHouseNumber(flatNumber.getText().toString());
         jam.setCity(city.getText().toString());
-        jam.setPeopleNumber(Integer.valueOf(personsNumber.getText().toString()));
+        jam.setNeededPeopleNumber(Integer.valueOf(personsNumber.getText().toString()));
         jam.setDate(DateUtils.parseToApiFormat(
-                editMeasureDate.getText().toString(),
-                editMeasureTime.getText().toString()));
+                editDate.getText().toString(),
+                editTime.getText().toString()));
 
         //listener.onJamAdd(jam);
         FragmentJams.jams.add(jam);
@@ -75,16 +75,16 @@ public class FragmentJamAdd extends Fragment
 
         setFragmentElements();
 
-        editMeasureDate = (EditText) getView().findViewById(R.id.edit_measure_date);
-        editMeasureTime = (EditText) getView().findViewById(R.id.edit_measure_time);
+        editDate = (EditText) getView().findViewById(R.id.edit_measure_date);
+        editTime = (EditText) getView().findViewById(R.id.edit_measure_time);
 
-        editMeasureTime.setText(DateUtils.formatAsTime(Calendar.getInstance().getTime()));
-        editMeasureDate.setText(DateUtils.formatAsDate(Calendar.getInstance().getTime()));
+        editTime.setText(DateUtils.formatAsTime(Calendar.getInstance().getTime()));
+        editDate.setText(DateUtils.formatAsDate(Calendar.getInstance().getTime()));
 
-        editMeasureTime.setOnClickListener(new View.OnClickListener() {
+        editTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String time = editMeasureTime.getText().toString();
+                String time = editTime.getText().toString();
                 TimePickerDialog timePicker;
                 try {
                     timePicker = DateUtils.getPickerTime(
@@ -98,10 +98,10 @@ public class FragmentJamAdd extends Fragment
 
 
 
-        editMeasureDate.setOnClickListener(new View.OnClickListener() {
+        editDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String date = editMeasureDate.getText().toString();
+                String date = editDate.getText().toString();
                 DatePickerDialog picker;
                 try {
                     picker = DateUtils.getPickerDate(
@@ -177,11 +177,11 @@ public class FragmentJamAdd extends Fragment
 
     @Override
     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-        editMeasureDate.setText(DateUtils.formatToUserFormat(dayOfMonth, monthOfYear, year));
+        editDate.setText(DateUtils.formatToUserFormat(dayOfMonth, monthOfYear, year));
     }
 
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        editMeasureTime.setText(DateUtils.formatToUserFormat(hourOfDay, minute));
+        editTime.setText(DateUtils.formatToUserFormat(hourOfDay, minute));
     }
 }

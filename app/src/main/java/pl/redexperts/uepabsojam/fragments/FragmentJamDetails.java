@@ -15,10 +15,11 @@ import com.getbase.floatingactionbutton.FloatingActionButton;
 
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import pl.redexperts.uepabsojam.R;
+import pl.redexperts.uepabsojam.model.Jam;
 import pl.redexperts.utils.FragmentHelper;
 
 
-public class FragmentJamDetails extends Fragment implements View.OnClickListener{
+public class FragmentJamDetails extends Fragment implements View.OnClickListener {
 
     private TextView jamTitle;
     private TextView jamWhen;
@@ -29,13 +30,12 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
     private RelativeLayout joinButton;
     private FloatingActionButton rateButton;
 
-//    #### Params
+    //    #### Params
     private String title = "Build your awesome app. The best JAM ever.";
     private String when = "12.05.2015 12:55";
     private String where = "Poznań, al.Niepodległości 10";
     private String users = "15/20";
     private String details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
-
 
 
     /**
@@ -58,7 +58,6 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
 
     }
@@ -107,22 +106,42 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
             jamTitle.setText(bundle.getString("jam"));
 
         }
-        if(bundle != null && bundle.getBoolean("nie") == true){
+        if (bundle != null && bundle.getBoolean("nie") == true) {
             View view1 = getView().findViewById(R.id.buttons);
-            if(view1 != null){
+            if (view1 != null) {
                 view1.setVisibility(View.GONE);
             }
+        } else {
+            if (bundle != null) {
+                fillLayoutUsingDataFromBundle(bundle);
+            }
+
         }
 
     }
 
+    private void fillLayoutUsingDataFromBundle(Bundle bundle) {
+        if (bundle != null) {
+            Jam jam = (Jam) bundle.getSerializable("key");
+            if (jam != null) {
+                if (jam.getName() != null) {
+                    jamTitle.setText(jam.getName());
+                }
+
+                if (jam.getName() != null) {
+                    jamTitle.setText(jam.getName());
+                }
+            }
+        }
+    }
+
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.cancel_button :
+        switch (v.getId()) {
+            case R.id.cancel_button:
                 FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersList(), true);
                 break;
-            case R.id.save_button :
+            case R.id.save_button:
                 FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersList(), true);
                 break;
             case R.id.rate_jam_button:
@@ -131,6 +150,6 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
                 DialogFragmentRate dialogRate = new DialogFragmentRate();
                 dialogRate.show(fm, "dialog_fragment_add_meeting");
                 break;
-         }
+        }
     }
 }
