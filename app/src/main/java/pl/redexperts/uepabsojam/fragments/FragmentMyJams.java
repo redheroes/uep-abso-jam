@@ -19,11 +19,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import pl.redexperts.uepabsojam.R;
-import pl.redexperts.uepabsojam.adapters.AdapterJams;
 import pl.redexperts.uepabsojam.adapters.AdapterMyJams;
-import pl.redexperts.uepabsojam.listeners.ApiResponseListener;
 import pl.redexperts.uepabsojam.listeners.OnArrayListContextMenuListener;
-import pl.redexperts.uepabsojam.model.Jam;
+import pl.redexperts.utils.FragmentHelper;
 import pl.redexperts.utils.PopupUtils;
 
 public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClickListener,
@@ -80,7 +78,7 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
         switch (item.getItemId()) {
             case R.id.jam_details:
                 //TODO: show details
-
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
                 return true;
 
             case R.id.jam_take_apart:

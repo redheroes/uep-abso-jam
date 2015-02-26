@@ -64,15 +64,16 @@
         <item>Zorganizowałeś</item>
     </string-array>
     <string-array name="jams_gone">
-        <item>Weźmiesz udział</item>
-        <item>Brałeś udział</item>
-        <item>Zorganizowałeś</item>
-        <item>Zorganizowałeś</item>
-        <item>djghkjghkgdkj</item>
-        <item>Zorganizowałeś</item>
-        <item>hfdjhfdjhgj</item>
-        <item>Zorganizowałeś</item>
-        <item>Zorganizowałeś</item>
+        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>
+        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum</item>
+        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>
+        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>
+        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem</item>
+        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum</item>
+        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>
+        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>
+        <item>Temat jam’u lorem ipsum lorem ipsum </item>
+
     </string-array>
     <string-array name="jams_organized">
         <item>Weźmiesz udział</item>

@@ -20,6 +20,11 @@ public class MainActivity extends MaterialNavigationDrawer {
     private boolean slidingMenuDisabled = false;
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
     public void init(Bundle bundle) {
 
         MaterialAccount account = new MaterialAccount(this.getResources(),"Nazwa","nazwa@gmail.com",R.mipmap.user,R.mipmap.mat2);
@@ -36,7 +41,6 @@ public class MainActivity extends MaterialNavigationDrawer {
         addSection(newSection("Ludzie", R.drawable.ic_human_male_female, new FragmentJams()));
         addSection(newSection("Ustawienia", R.drawable.ic_settings, new FragmentJams()));
         getToolbar().setTitleTextColor(color);
-
     }
 
     @Override
