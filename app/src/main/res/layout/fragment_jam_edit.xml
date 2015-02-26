@@ -30,7 +30,7 @@
 
             <TextView
                 style="@style/edit_text_title"
-                android:layout_marginTop="@dimen/validator_margin_top"
+                android:layout_marginTop="20dp"
                 android:text="@string/jam_edit_description" />
 
             <EditText
@@ -40,8 +40,8 @@
 
 
             <TextView
+                android:layout_marginTop="20dp"
                 style="@style/edit_text_title"
-                android:layout_marginTop="@dimen/validator_margin_top"
                 android:text="@string/jam_edit_when" />
 
 
@@ -134,6 +134,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_weight="9"
                 android:weightSum="2">
 
@@ -166,6 +167,7 @@
                         android:text="@string/jam_edit_city" />
 
                     <EditText
+                        android:paddingBottom="@dimen/text_view_padding_bottom"
                         android:id="@+id/jam_address_city"
                         style="@style/edit_text"
                         android:background="@drawable/edit_text_selector" />
@@ -173,6 +175,7 @@
                 </LinearLayout>
             </LinearLayout>
             <TextView
+                android:layout_marginTop="20dp"
                 style="@style/edit_text_title"
                 android:text="@string/jam_edit_number_of_people" />
 
@@ -181,7 +184,8 @@
                 style="@style/edit_text_number_decimal"
                 android:background="@drawable/edit_text_selector"
                 android:inputType="number"
-                android:textColorHint="@android:color/darker_gray" />
+                android:textColorHint="@android:color/darker_gray"
+                android:layout_marginBottom="50dp"/>
 
         </LinearLayout>
     </ScrollView>
