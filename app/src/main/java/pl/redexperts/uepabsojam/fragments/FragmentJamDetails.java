@@ -69,6 +69,7 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
         activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle("Szczegóły Jamu");
 
+
         return view;
     }
 

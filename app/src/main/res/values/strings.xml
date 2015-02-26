@@ -56,6 +56,11 @@
     <string name="where">Gdzie: </string>
     <string name="users">Ilość osób: </string>
 
+    <!-- Jam Rate -->
+    <string name="rate_organize_text">Organizacja: </string>
+    <string name="rate_topic_text">Tematyka: </string>
+    <string name="rate_effect_text">Efekt: </string>
+
     <string-array name="jams_future">
         <item>Lorem ipfsgr</item>
         <item>Brałeś udział</item>

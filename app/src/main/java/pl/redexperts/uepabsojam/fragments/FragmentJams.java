@@ -18,6 +18,7 @@ import pl.redexperts.uepabsojam.adapters.AdapterJams;
 import pl.redexperts.uepabsojam.listeners.ApiResponseListener;
 import pl.redexperts.uepabsojam.listeners.OnArrayListContextMenuListener;
 import pl.redexperts.uepabsojam.model.Jam;
+import pl.redexperts.utils.FragmentHelper;
 import pl.redexperts.utils.PopupUtils;
 
 public class FragmentJams extends Fragment implements View.OnClickListener,
