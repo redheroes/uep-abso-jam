@@ -7,8 +7,12 @@ import java.util.Date;
 public class Jam implements Serializable{
     long id;
     String name;
-    String address;
+    String street;
+    String houseNumber;
+    String city;
+    Integer peopleNumber;
     Date date;
+    String description;
 
     public long getId() {
         return id;
@@ -26,12 +30,12 @@ public class Jam implements Serializable{
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getStreet() {
+        return street;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
     public Date getDate() {
@@ -40,5 +44,37 @@ public class Jam implements Serializable{
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getHouseNumber() {
+        return houseNumber;
+    }
+
+    public void setHouseNumber(String houseNumber) {
+        this.houseNumber = houseNumber;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public Integer getPeopleNumber() {
+        return peopleNumber;
+    }
+
+    public void setPeopleNumber(Integer peopleNumber) {
+        this.peopleNumber = peopleNumber;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

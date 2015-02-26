@@ -78,7 +78,7 @@
                 android:text="@string/jam_edit_street" />
 
             <EditText
-                android:id="@+id/pesel_number"
+                android:id="@+id/jam_street"
                 style="@style/edit_text_number_decimal"
                 android:background="@drawable/edit_text_selector"
                 android:inputType="number"
