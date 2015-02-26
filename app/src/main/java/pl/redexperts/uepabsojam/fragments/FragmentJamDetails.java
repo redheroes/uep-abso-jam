@@ -52,13 +52,16 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_jam_details, container, false);
+        View view = inflater.inflate(R.layout.fragment_jam_details, container, false);
+        return view;
+
     }
 
     @Override
@@ -80,7 +83,7 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
 
         joinButton.setOnClickListener(this);
         usersButton.setOnClickListener(this);
-        
+
     }
 
     @Override
