@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import pl.redexperts.uepabsojam.R;
 import pl.redexperts.uepabsojam.adapters.AdapterJams;
+import pl.redexperts.uepabsojam.listeners.AbsoListener;
 import pl.redexperts.uepabsojam.listeners.ApiResponseListener;
 import pl.redexperts.uepabsojam.listeners.OnArrayListContextMenuListener;
 import pl.redexperts.uepabsojam.model.Jam;
@@ -22,14 +23,14 @@ import pl.redexperts.utils.FragmentHelper;
 import pl.redexperts.utils.PopupUtils;
 
 public class FragmentJams extends Fragment implements View.OnClickListener,
-        PopupMenu.OnMenuItemClickListener, ApiResponseListener, OnArrayListContextMenuListener {
+        PopupMenu.OnMenuItemClickListener, ApiResponseListener, OnArrayListContextMenuListener, AbsoListener.OnJamAddListener {
 
 
     private static final String TAG = FragmentJams.class.getSimpleName();
 
     private AdapterJams adapter;
     private Jam jam;
-    private ArrayList<Jam> jams = new ArrayList<>();
+    public static ArrayList<Jam> jams = new ArrayList<>();
     public final static String KEY_BUNDLE = "jam";
 
     public Bundle getJamBundle() {
@@ -39,8 +40,13 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
     }
 
     public void getJamsFromServer() {
-        //TODO: add mock jams
+        if (jams.size() > 0) {
+            adapter.add(jams.get(jams.size() - 1));
+            adapter.notifyDataSetChanged();
+        }
     }
+
+
 
     @Override
     public void onClick(View view) {
@@ -139,5 +145,15 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
         adapter.addAll(jams);
         adapter.notifyDataSetChanged();
     }
-    
+
+    @Override
+    public void onJamAdd(final Jam jam) {
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                adapter.add(jam);
+                adapter.notifyDataSetChanged();
+            }
+        });
+    }
 }

@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import pl.redexperts.uepabsojam.R;
@@ -52,14 +53,26 @@ public class AdapterJams extends ArrayAdapter<Jam> {
             holder = new ViewHolder();
 
             row = LayoutInflater.from(context)
-                    .inflate(R.layout.fragment_my_jams, parent, false);
+                    .inflate(R.layout.fragment_jam_item, parent, false);
 
             holder.name = (TextView) row.findViewById(R.id.text_jam_name);
+            holder.personsNumber = (TextView) row.findViewById(R.id.text_persons_number);
+            holder.date = (TextView) row.findViewById(R.id.text_date);
+
 
 
             if (jam != null && jam.getName() != null) {
                 holder.name.setText(jam.getName());
             }
+            if (jam != null && jam.getPeopleNumber() != null) {
+                holder.personsNumber.setText(String.valueOf(jam.getPeopleNumber()));
+            }
+
+            if (jam != null && jam.getDate() != null) {
+                SimpleDateFormat format = new  SimpleDateFormat("yyyy.MM.dd");
+                holder.date.setText(format.format(jam.getDate()));
+            }
+
 
             row.setTag(holder);
 
@@ -87,7 +100,7 @@ public class AdapterJams extends ArrayAdapter<Jam> {
     }
 
     private static class ViewHolder {
-        TextView name, address, date;
+        TextView name, personsNumber, date;
         RelativeLayout menuButton;
     }
 }

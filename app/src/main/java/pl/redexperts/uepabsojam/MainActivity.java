@@ -7,11 +7,15 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialAccount;
 import pl.redexperts.uepabsojam.fragments.FragmentJams;
 import pl.redexperts.uepabsojam.fragments.FragmentMyJams;
 import pl.redexperts.uepabsojam.fragments.FragmentSettings;
+import pl.redexperts.uepabsojam.model.Jam;
 
 
 public class MainActivity extends MaterialNavigationDrawer {
@@ -19,6 +23,9 @@ public class MainActivity extends MaterialNavigationDrawer {
 
     private Menu contextMenu;
     private boolean slidingMenuDisabled = false;
+
+    public static List<Jam> jamList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +35,7 @@ public class MainActivity extends MaterialNavigationDrawer {
     @Override
     public void init(Bundle bundle) {
 
-        MaterialAccount account = new MaterialAccount(this.getResources(),"Nazwa","nazwa@gmail.com",R.mipmap.user,R.mipmap.mat2);
+        MaterialAccount account = new MaterialAccount(this.getResources(), "Nazwa", "nazwa@gmail.com", R.mipmap.user, R.mipmap.mat2);
         addAccount(account);
 
         int color = getResources().getColor(R.color.main_color);
