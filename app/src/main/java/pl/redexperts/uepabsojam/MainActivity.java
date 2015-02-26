@@ -40,7 +40,7 @@ public class MainActivity extends MaterialNavigationDrawer {
         addSection(newSection("Lista Jamów", R.drawable.ic_format_list_numbers, new FragmentJams()));
         addSection(newSection("Moje Jamy", R.drawable.ic_playlist_plus, new FragmentMyJams()));
         addSection(newSection("Ludzie", R.drawable.ic_human_male_female, new FragmentJams()));
-        addSection(newSection("Ustawienia", R.drawable.ic_settings, new FragmentJamDetails()));
+        addSection(newSection("Ustawienia", R.drawable.ic_settings, new FragmentJams()));
         getToolbar().setTitleTextColor(color);
     }
 
