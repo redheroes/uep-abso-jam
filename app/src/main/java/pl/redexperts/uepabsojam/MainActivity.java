@@ -7,11 +7,15 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialAccount;
 import pl.redexperts.uepabsojam.fragments.FragmentJams;
 import pl.redexperts.uepabsojam.fragments.FragmentMyJams;
 import pl.redexperts.uepabsojam.fragments.FragmentSettings;
+import pl.redexperts.uepabsojam.model.Jam;
 
 
 public class MainActivity extends MaterialNavigationDrawer {
@@ -20,6 +24,7 @@ public class MainActivity extends MaterialNavigationDrawer {
     private Menu contextMenu;
     private boolean slidingMenuDisabled = false;
 
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +50,6 @@ public class MainActivity extends MaterialNavigationDrawer {
         addSection(newSection("Ludzie", R.drawable.ic_human_male_female, new FragmentJams()));
         addSection(newSection("Ustawienia", R.drawable.ic_settings, new FragmentSettings()));
         getToolbar().setTitleTextColor(color);
-
     }
 
     @Override

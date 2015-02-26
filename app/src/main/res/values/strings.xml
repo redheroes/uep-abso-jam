@@ -59,6 +59,8 @@
     <string name="rate_organize_text">Organizacja: </string>
     <string name="rate_topic_text">Tematyka: </string>
     <string name="rate_effect_text">Efekt: </string>
+    <string name="time">Godzina</string>
+    <string name="date">Data</string>
 
     <string-array name="jams_gone">
         <item>Stworzenie nowej metodologii we wdrażaniu procesów w firmach. </item>

@@ -56,7 +56,7 @@
 
     <!-- layouts -->
     <dimen name="layout_margin_bottom">50dp</dimen>
-    <dimen name="layout_margin_left">56dp</dimen>
+    <dimen name="layout_margin_left">16dp</dimen>
     <dimen name="layout_padding_left">72dp</dimen>
     <dimen name="layout_height">56dp</dimen>
 
