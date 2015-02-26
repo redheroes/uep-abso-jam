@@ -95,12 +95,36 @@ public class FragmentUsersInfo extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+        FragmentJamDetails fragmentJamDetails = new FragmentJamDetails();
+        Bundle bundle = new Bundle();
         switch (v.getId()){
+
             case R.id.cancel_button :
                 FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersList(), true);
                 break;
             case R.id.save_button :
                 FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersList(), true);
+                break;
+
+            case R.id.jam1 :
+                bundle.putString("jam", jam1.getText().toString());
+                fragmentJamDetails.setArguments(bundle);
+                FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
+                break;
+            case R.id.jam2 :
+                bundle.putString("jam", jam2.getText().toString());
+                fragmentJamDetails.setArguments(bundle);
+                FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
+                break;
+            case R.id.jam3 :
+                bundle.putString("jam", jam3.getText().toString());
+                fragmentJamDetails.setArguments(bundle);
+                FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
+                break;
+            case R.id.jam4 :
+                bundle.putString("jam", jam4.getText().toString());
+                fragmentJamDetails.setArguments(bundle);
+                FragmentHelper.showFragment(getActivity(), R.id.content, fragmentJamDetails, true);
                 break;
          }
     }

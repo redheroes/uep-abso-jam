@@ -84,26 +84,20 @@
         <item>Krzysztod Krawczyk</item>
     </string-array>
     <string-array name="jams_gone">
-        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>
-        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum</item>
-        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>
-        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>
-        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem</item>
-        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum</item>
-        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>
-        <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>
-        <item>Temat jam’u lorem ipsum lorem ipsum </item>
+        <item>Build your awesome app. The best JAM ever.</item>
+        <item>Pomóż uratować lasy deszczone.</item>
+        <item>Design thinking. Stwórz z nami nasz nowy produkt - WBK.</item>
+        <item>Stwórzmy scenariusz gry planszowej, mam zarys pomysłu.</item>
+        <item>Stworzenie nowej metodologii we wdrażaniu procesów w firmach. </item>
+        <item>Przeniesienie produkcji do Chin, bo tutaj za drogo. Zaplanowanie całości przedsięwzięcia i koordynacja.</item>
+        <item>Wyimaginowany przyjaciel, jak z tym żyć.</item>
+        <item>Kajakiem przez świat, co zabrać ze sobą prócz kajaka?</item>
+
 
     </string-array>
     <string-array name="jams_organized">
-        <item>Weźmiesz udział</item>
-        <item>Brałeś udział</item>
-        <item>fdnjgfdhgd</item>
-        <item>hgfkdjhfdkjhgdj</item>
-        <item>Zorganizowałeś</item>
-        <item>Zorganizowałeś</item>
-        <item>Zorganizowałeś</item>
-        <item>Zorganizowałeś</item>
-        <item>Zorganizowałeś</item>
+        <item>Kajakiem przez świat, co zabrać ze sobą prócz kajaka?</item>
+        <item>Rozmyślanie nad istotą życia. </item>
+        <item>Nowa deskorolka czy nowy snowboard. Jak stworzyć firmę event’ową?</item>
     </string-array>
 </resources>

@@ -55,6 +55,8 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
     }
 
     @Override
@@ -77,7 +79,7 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         jamTitle = (TextView) view.findViewById(R.id.jamTitle);
-        jamTitle.setText(title);
+
         jamWhen = (TextView) view.findViewById(R.id.jamWhenValue);
         jamWhen.setText(when);
         jamWhere = (TextView) view.findViewById(R.id.jamWhereValue);
@@ -93,6 +95,15 @@ public class FragmentJamDetails extends Fragment implements View.OnClickListener
         joinButton.setOnClickListener(this);
         usersButton.setOnClickListener(this);
 
+        Bundle bundle = getArguments();
+
+        if (bundle != null && bundle.getString("jam") != null) {
+            jamTitle.setText(bundle.getString("jam"));
+            View view1 = getView().findViewById(R.id.buttons);
+            if(view1 != null){
+                view1.setVisibility(View.GONE);
+            }
+        }
     }
 
     @Override

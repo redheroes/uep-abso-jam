@@ -110,7 +110,7 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
         listView.setAdapter(adapter);
         registerForContextMenu(listView);
 
-        spinner.setSelection(0, true);
+        spinner.setSelection(1, true);
         spinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
                     @Override
