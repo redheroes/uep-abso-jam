@@ -41,6 +41,8 @@ public class MainActivity extends MaterialNavigationDrawer {
         int color = getResources().getColor(R.color.main_color);
         int white = getResources().getColor(android.R.color.white);
 
+
+
         setUserEmailTextColor(white);
         setUsernameTextColor(white);
         // create sections
