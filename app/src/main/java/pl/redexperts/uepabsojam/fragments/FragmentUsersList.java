@@ -20,6 +20,7 @@ import java.util.Arrays;
 
 import pl.redexperts.uepabsojam.R;
 import pl.redexperts.uepabsojam.adapters.AdapterMyJams;
+import pl.redexperts.uepabsojam.adapters.AdapterUsers;
 import pl.redexperts.uepabsojam.listeners.OnArrayListContextMenuListener;
 import pl.redexperts.utils.FragmentHelper;
 import pl.redexperts.utils.PopupUtils;
@@ -30,7 +31,7 @@ public class FragmentUsersList extends Fragment implements PopupMenu.OnMenuItemC
 
     private static final String TAG = FragmentUsersList.class.getSimpleName();
 
-    private AdapterMyJams adapter;
+    private AdapterUsers adapter;
     private String jam;
     private ArrayList<String> jamsFuture;
     private ArrayList<String> jamsGone;
@@ -48,14 +49,14 @@ public class FragmentUsersList extends Fragment implements PopupMenu.OnMenuItemC
         jam = adapter.getItem(position);
 
         PopupUtils.showPopup(getActivity(), view.findViewById(R.id.jam_menu_button),
-                this, R.menu.my_jams_context_menu);
+                this, R.menu.users_list_context_menu);
     }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         MenuInflater inflater = getActivity().getMenuInflater();
-        inflater.inflate(R.menu.jams_context_menu, menu);
+        inflater.inflate(R.menu.users_list_context_menu, menu);
     }
 
     @Override
@@ -67,9 +68,7 @@ public class FragmentUsersList extends Fragment implements PopupMenu.OnMenuItemC
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        jamsFuture = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.jams_future)));
-        jamsGone = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.jams_gone)));
-        jamsOrganized = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.jams_organized)));
+        jamsFuture = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.users)));
     }
 
     @Override
@@ -79,7 +78,18 @@ public class FragmentUsersList extends Fragment implements PopupMenu.OnMenuItemC
                 //TODO: show details
                 FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
                 return true;
-
+            case R.id.jam_accept:
+                //TODO: show details
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
+                return true;
+            case R.id.jam_reject:
+                //TODO: show details
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
+                return true;
+            case R.id.jam_evaluation:
+                //TODO: show details
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
+                return true;
             default:
                 return false;
         }
@@ -95,7 +105,7 @@ public class FragmentUsersList extends Fragment implements PopupMenu.OnMenuItemC
     }
 
     private void setFragmentElements() {
-        adapter = new AdapterMyJams(getActivity(), R.id.jams_list_container, jamsFuture);
+        adapter = new AdapterUsers(getActivity(), R.id.jams_list_container, jamsFuture);
         adapter.setOnContextMenuClickListener(this);
 
         ArrayAdapter adapterJams = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),

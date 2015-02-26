@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/alert_users_list_item_height"
     android:id="@+id/layout_jam_item"
-    android:paddingLeft="16dp"
     android:paddingTop="16dp"
     >
 
@@ -54,5 +53,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="@dimen/activity_right_padding"
         android:src="@android:drawable/ic_menu_manage"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/alert_users_spacer_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="0dp"
+        android:background="@color/alert_users_spacer_color"></View>
 
 </RelativeLayout>

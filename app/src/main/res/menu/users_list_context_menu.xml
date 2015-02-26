@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/jam_details"
+        android:title="@string/jam_menu_item_details" />
+    <item
+        android:id="@+id/jam_accept"
+        android:title="@string/jam_menu_item_accept" />
+    <item
+        android:id="@+id/jam_reject"
+        android:title="@string/jam_menu_item_reject" />
+    <item
+        android:id="@+id/jam_evaluation"
+        android:title="@string/jam_menu_item_evaluation" />
+</menu>

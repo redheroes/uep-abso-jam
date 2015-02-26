@@ -29,6 +29,9 @@
 
     <!--Jams-->
     <string name="jam_menu_item_details">Szczegóły</string>
+    <string name="jam_menu_item_accept">Zaakceptuj</string>
+    <string name="jam_menu_item_reject">Odrzuć</string>
+    <string name="jam_menu_item_evaluation">Oceń</string>
     <string name="jam_menu_item_take_apart">Weź udział</string>
     <string name="jam_edit_name">Nazwa jamu</string>
     <string name="jam_edit_description">Opis</string>
@@ -62,6 +65,17 @@
         <item>Zorganizowałeś</item>
         <item>Zorganizowałeś</item>
         <item>Zorganizowałeś</item>
+    </string-array>
+    <string-array name="users">
+        <item>Tomasz Cieślak</item>
+        <item>Borys Jelcyn</item>
+        <item>Król Julian</item>
+        <item>Salvador Dali</item>
+        <item>Ryszard Rynkowski</item>
+        <item>Donald Złodziej</item>
+        <item>Mis Jogi</item>
+        <item>Emmanuel Olisadebe</item>
+        <item>Krzysztod Krawczyk</item>
     </string-array>
     <string-array name="jams_gone">
         <item>Temat jam’u lorem ipsum lorem ipsum lorem ipsum lorem ipsum</item>

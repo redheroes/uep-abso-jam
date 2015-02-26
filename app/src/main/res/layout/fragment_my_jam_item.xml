@@ -33,4 +33,10 @@
         android:layout_marginRight="@dimen/activity_right_padding"
         android:src="@drawable/dots_vertical"/>
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/alert_users_spacer_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/alert_users_spacer_color"></View>
+
 </RelativeLayout>
