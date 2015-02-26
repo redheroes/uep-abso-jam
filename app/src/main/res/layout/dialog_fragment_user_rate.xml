@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/rate_organize_text"
+        android:text="Zaangażowanie"
         android:id="@+id/textView"
         android:layout_gravity="left"
         android:gravity="top"
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/rate_topic_text"
+        android:text="Pomysłowość"
         android:id="@+id/textView2"
         android:layout_weight="1"
         android:layout_gravity="left|top" />
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/rate_effect_text"
+        android:text="Fachowość"
         android:id="@+id/textView3"
         android:layout_weight="1"
         android:layout_gravity="left|top" />

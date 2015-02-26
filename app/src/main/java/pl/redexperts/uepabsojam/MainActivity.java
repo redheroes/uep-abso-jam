@@ -28,13 +28,16 @@ public class MainActivity extends MaterialNavigationDrawer {
     @Override
     public void init(Bundle bundle) {
 
-        MaterialAccount account = new MaterialAccount(this.getResources(),"Nazwa","nazwa@gmail.com",R.mipmap.user,R.mipmap.mat2);
+        MaterialAccount account = new MaterialAccount
+                (this.getResources(),"Michał Bielak","bielak.mastah@gigant.pro",R.drawable.michal_bielak,R.drawable.wallpaper);
         addAccount(account);
 
-        int color = getResources().getColor(R.color.main_color);
 
-        setUserEmailTextColor(color);
-        setUsernameTextColor(color);
+        int color = getResources().getColor(R.color.main_color);
+        int white = getResources().getColor(android.R.color.white);
+
+        setUserEmailTextColor(white);
+        setUsernameTextColor(white);
         // create sections
         setDrawerBackgroundColor(getResources().getColor(android.R.color.white));
         addSection(newSection("Lista Jamów", R.drawable.ic_format_list_numbers, new FragmentJams()));
@@ -42,6 +45,7 @@ public class MainActivity extends MaterialNavigationDrawer {
         addSection(newSection("Ludzie", R.drawable.ic_human_male_female, new FragmentJams()));
         addSection(newSection("Ustawienia", R.drawable.ic_settings, new FragmentSettings()));
         getToolbar().setTitleTextColor(color);
+
     }
 
     @Override

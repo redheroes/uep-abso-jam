@@ -11,7 +11,4 @@
     <item
         android:id="@+id/jam_reject"
         android:title="@string/jam_menu_item_reject" />
-    <item
-        android:id="@+id/jam_evaluation"
-        android:title="@string/jam_menu_item_evaluation" />
 </menu>

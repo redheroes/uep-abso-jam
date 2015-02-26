@@ -20,7 +20,7 @@ public class DialogFragmentUserRate extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         getDialog().setTitle("Ocena użytkownika");
-        View view = inflater.inflate(R.layout.dialog_fragment_rate, container, false);
+        View view = inflater.inflate(R.layout.dialog_fragment_user_rate, container, false);
         Button button = (Button) view.findViewById(R.id.rate_save_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

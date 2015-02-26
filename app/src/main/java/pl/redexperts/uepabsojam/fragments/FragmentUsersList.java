@@ -95,10 +95,6 @@ public class FragmentUsersList extends Fragment implements PopupMenu.OnMenuItemC
                 //TODO: show details
                 FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
                 return true;
-            case R.id.jam_evaluation:
-                //TODO: show details
-                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
-                return true;
             default:
                 return false;
         }
