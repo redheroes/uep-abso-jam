@@ -1,4 +1,4 @@
-package pl.redexperts.uepabsojam;
+package pl.redefragmentxperts.uepabsojam;
 
 import android.accounts.Account;
 import android.app.Application;
