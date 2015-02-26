@@ -19,20 +19,24 @@
             android:background="@drawable/button_color"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@drawable/button_text_color"
-                android:text="@string/action_users" />
 
             <ImageView
+                android:id="@+id/image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginLeft="@dimen/text_view_margin_left"
                 android:layout_centerVertical="true"
-                android:src="@drawable/cancel"/>
+                android:src="@drawable/ic_account_multiple"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/image"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@drawable/button_text_color"
+                android:text="@string/action_users" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -57,7 +61,7 @@
                 android:layout_gravity="left"
                 android:layout_marginLeft="@dimen/text_view_margin_left"
                 android:layout_centerVertical="true"
-                android:src="@drawable/check_in"/>
+                android:src="@drawable/ic_account_multiple_plus"/>
         </RelativeLayout>
 
 

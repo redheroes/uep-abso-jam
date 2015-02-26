@@ -5,18 +5,22 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import pl.redexperts.uepabsojam.R;
+import pl.redexperts.utils.FragmentHelper;
 
 
-public class FragmentJamDetails extends Fragment {
+public class FragmentJamDetails extends Fragment implements View.OnClickListener{
 
     private TextView jamTitle;
     private TextView jamWhen;
     private TextView jamWhere;
     private TextView jamUsers;
     private TextView jamDetails;
+    private RelativeLayout usersButton;
+    private RelativeLayout joinButton;
 
 //    #### Params
     private String title = "Build your awesome app. The best JAM ever.";
@@ -70,5 +74,24 @@ public class FragmentJamDetails extends Fragment {
         jamUsers.setText(users);
         jamDetails = (TextView) view.findViewById(R.id.jamDelails);
         jamDetails.setText(details);
+
+        joinButton = (RelativeLayout) getView().findViewById(R.id.cancel_button);
+        usersButton = (RelativeLayout) getView().findViewById(R.id.save_button);
+
+        joinButton.setOnClickListener(this);
+        usersButton.setOnClickListener(this);
+        
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.cancel_button :
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersList(), true);
+                break;
+            case R.id.save_button :
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersList(), true);
+                break;
+         }
     }
 }

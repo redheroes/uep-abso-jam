@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/alert_users_list_item_height"
+    android:id="@+id/layout_jam_item"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    >
+
+    <ImageView
+        android:layout_marginTop="16dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_account"/>
+   
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="bottom"
+        android:layout_below="@+id/jam_menu_button"
+        android:text="13.03.2015"
+        android:layout_marginRight="@dimen/activity_right_padding"
+        android:textSize="@dimen/list_item_text_size"
+        android:textColor="@color/edit_text_unselected"
+
+        />
+
+    <TextView
+        style="@style/measuremets_list_text"
+        android:layout_alignTop="@id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marek Biernacki"
+        android:id="@+id/text_jam_name"
+        android:textSize="@dimen/list_item_large_text_size"
+        android:textColor="@color/alert_users_bold_text"
+
+        />
+
+    <TextView
+        style="@style/measuremets_list_text"
+        android:layout_alignParentLeft="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ocena: 5,5"
+        android:layout_alignBottom="@id/text_jam_name"
+
+        android:id="@+id/evaluation"
+        android:textSize="@dimen/list_item_large_text_size"
+        android:textColor="@color/alert_users_bold_text"
+        android:layout_toLeftOf="@id/jam_menu_button"
+
+        />
+
+    <TextView
+        style="@style/measuremets_list_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_text_size"
+        android:id="@+id/text_jam_address"
+        android:layout_below="@+id/text_jam_name"
+        android:gravity="bottom"
+        android:text="Wesola 15/56"
+        android:layout_alignBottom="@id/text_date"
+        android:textSize="@dimen/list_item_text_size"
+        />
+
+
+    <ImageView
+        android:id="@+id/jam_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/activity_right_padding"
+        android:src="@drawable/dots_vertical"/>
+
+</RelativeLayout>

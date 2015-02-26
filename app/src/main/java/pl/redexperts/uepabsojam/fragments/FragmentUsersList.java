@@ -24,11 +24,11 @@ import pl.redexperts.uepabsojam.listeners.OnArrayListContextMenuListener;
 import pl.redexperts.utils.FragmentHelper;
 import pl.redexperts.utils.PopupUtils;
 
-public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClickListener,
+public class FragmentUsersList extends Fragment implements PopupMenu.OnMenuItemClickListener,
         OnArrayListContextMenuListener {
 
 
-    private static final String TAG = FragmentMyJams.class.getSimpleName();
+    private static final String TAG = FragmentUsersList.class.getSimpleName();
 
     private AdapterMyJams adapter;
     private String jam;
@@ -36,7 +36,6 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
     private ArrayList<String> jamsGone;
     private ArrayList<String> jamsOrganized;
     public final static String KEY_BUNDLE = "jam";
-    private Spinner spinner;
 
     public void getJamsFromServer() {
         //TODO: add mock jams
@@ -62,7 +61,7 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_my_jams, container, false);
+        return inflater.inflate(R.layout.fragment_users_list, container, false);
     }
 
     @Override
@@ -80,6 +79,7 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
                 //TODO: show details
                 FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
                 return true;
+
             default:
                 return false;
         }
@@ -103,37 +103,10 @@ public class FragmentMyJams extends Fragment implements PopupMenu.OnMenuItemClic
 
         adapterJams.setDropDownViewResource(R.layout.spinner_text_view);
 
-        spinner = (Spinner) getView().findViewById(R.id.spinner_my_jams);
-        spinner.setAdapter(adapterJams);
 
         ListView listView = ((ListView) getView().findViewById(R.id.jams_list_container));
         listView.setAdapter(adapter);
         registerForContextMenu(listView);
-
-        spinner.setSelection(0, true);
-        spinner.setOnItemSelectedListener(
-                new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-
-                        switch (position){
-                            case 0 :
-                                updateUi(jamsFuture);
-                                break;
-                            case 1 :
-                                updateUi(jamsGone);
-                                break;
-                            case 2:
-                                updateUi(jamsOrganized);
-                                break;
-                        }
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
     }
 
     private void updateUi(ArrayList<String> jams) {
