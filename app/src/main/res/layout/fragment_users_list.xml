@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:theme="@style/ActionBarThemeOverlay"
-        android:background="@color/main_color"/>
+        android:background="@color/slidingmenu_background"/>
 
     <ListView
         android:layout_marginTop="8dp"

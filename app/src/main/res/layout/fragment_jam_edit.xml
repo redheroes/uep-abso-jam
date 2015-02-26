@@ -67,13 +67,14 @@
 
 
             <TextView
-                style="@style/edit_text_title"
+                style="@style/header"
                 android:layout_marginBottom="0dp"
                 android:layout_marginTop="25dp"
                 android:text="@string/jam_edit_place" />
 
 
             <TextView
+                android:layout_marginTop="@dimen/text_view_margin_top"
                 style="@style/edit_text_title"
                 android:text="@string/jam_edit_street" />
 

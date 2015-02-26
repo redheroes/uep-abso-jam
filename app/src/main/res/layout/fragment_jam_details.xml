@@ -28,7 +28,7 @@
     tools:context="pl.redexperts.uepabsojam.fragments.FragmentJamDetails"
     android:orientation="vertical">
 
-    <include layout="@layout/cancel_save_buttons"
+    <include layout="@layout/users_join_buttons"
         android:id="@+id/buttons"/>
 
     <TextView

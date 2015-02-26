@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/alert_users_person_image_size"
+    android:layout_height="@dimen/alert_users_list_item_height"
     android:id="@+id/layout_jam_item"
     android:layout_marginTop="16dp"
     >

@@ -85,7 +85,7 @@ public class FragmentUsersList extends Fragment implements PopupMenu.OnMenuItemC
         switch (item.getItemId()) {
             case R.id.jam_details:
                 //TODO: show details
-                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamDetails(), true);
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentUsersInfo(), true);
                 return true;
             case R.id.jam_accept:
                 //TODO: show details

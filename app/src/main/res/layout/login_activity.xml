@@ -54,7 +54,7 @@
                     android:gravity="center"
                     style="@style/edit_text"
                     android:layout_marginTop="@dimen/login_margin_top"
-                    android:background="@drawable/edit_text_selector"
+                    android:background="@drawable/button_text_selector"
                     android:text="@string/login_fragment_linkdin_login"
                   />
 
@@ -72,7 +72,7 @@
                     style="@style/edit_text"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/login_margin"
-                    android:background="@drawable/edit_text_selector"
+                    android:background="@drawable/button_text_selector"
                     android:text="@string/login_fragment_email_login" />
 
                 <TextView
