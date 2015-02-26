@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialAccount;
+import pl.redexperts.uepabsojam.fragments.FragmentJamDetails;
 import pl.redexperts.uepabsojam.fragments.FragmentJams;
 import pl.redexperts.uepabsojam.fragments.FragmentMyJams;
 
@@ -39,7 +40,7 @@ public class MainActivity extends MaterialNavigationDrawer {
         addSection(newSection("Lista Jamów", R.drawable.ic_format_list_numbers, new FragmentJams()));
         addSection(newSection("Moje Jamy", R.drawable.ic_playlist_plus, new FragmentMyJams()));
         addSection(newSection("Ludzie", R.drawable.ic_human_male_female, new FragmentJams()));
-        addSection(newSection("Ustawienia", R.drawable.ic_settings, new FragmentJams()));
+        addSection(newSection("Ustawienia", R.drawable.ic_settings, new FragmentJamDetails()));
         getToolbar().setTitleTextColor(color);
     }
 

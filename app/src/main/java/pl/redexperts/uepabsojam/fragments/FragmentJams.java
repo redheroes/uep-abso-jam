@@ -48,7 +48,7 @@ public class FragmentJams extends Fragment implements View.OnClickListener,
         switch (view.getId()) {
             case R.id.add_jam_button:
 
-                //TODO: start edit jam fragment
+                FragmentHelper.showFragment(getActivity(), R.id.content, new FragmentJamAdd(), true);
                 break;
 
 
